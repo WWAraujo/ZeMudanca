@@ -17,5 +17,5 @@ https://www.figma.com/file/XiVWe9k89E2taVQiXy8N8I/Z%C3%A9-Mudan%C3%A7a?node-id=0
 
 +============================================================+
 
-
 ![Tela de prototipação](/TelasPrototipação/IMAGEM1.png)
+![Tela de prototipação](/TelasPrototipação/IMAGEM2.png)
