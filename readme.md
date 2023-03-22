@@ -17,4 +17,5 @@ https://www.figma.com/file/XiVWe9k89E2taVQiXy8N8I/Z%C3%A9-Mudan%C3%A7a?node-id=0
 
 +============================================================+
 
-![Architeture drawing](\Users\semaias.olima\Desktop/IMAGEM SEMA.png)
+
+![Tela de prototipação](//ZeMudanca/Telas prototipação/IMAGEM SEMA.png)
