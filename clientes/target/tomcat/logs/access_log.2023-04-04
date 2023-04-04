@@ -31,3 +31,7 @@
 0:0:0:0:0:0:0:1 - - [04/Apr/2023:02:28:01 -0300] "GET / HTTP/1.1" 200 2954 http-bio-8080-exec-1 895
 0:0:0:0:0:0:0:1 - - [04/Apr/2023:02:28:01 -0300] "GET /src/resources/image/icons8-em-tr%C3%83%C2%A2nsito-50.png HTTP/1.1" 404 1063 http-bio-8080-exec-2 3
 0:0:0:0:0:0:0:1 - - [04/Apr/2023:02:28:01 -0300] "GET /index.css HTTP/1.1" 304 - http-bio-8080-exec-3 7
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:14:33:33 -0300] "GET / HTTP/1.1" 200 2954 http-bio-8080-exec-2 550
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:14:33:33 -0300] "GET /src/resources/image/icons8-em-tr%C3%83%C2%A2nsito-50.png HTTP/1.1" 404 1063 http-bio-8080-exec-1 2
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:14:33:33 -0300] "GET /index.css HTTP/1.1" 200 2086 http-bio-8080-exec-3 2
+0:0:0:0:0:0:0:1 - - [04/Apr/2023:14:33:33 -0300] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-5 2
