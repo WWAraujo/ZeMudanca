@@ -10,7 +10,7 @@ public class ClienteDao {
 
     public void salvarCliente(ClienteModel clienteModel){
 
-        String SQL = "INSERT INTO cliente (nome_cli) VALUES (?)";
+        String SQL = "INSERT INTO cliente (nome_cli) VALUES (?,?,?,?,?,?)";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
@@ -18,6 +18,11 @@ public class ClienteDao {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setString(1, clienteModel.getNome());
+            preparedStatement.setString(2,clienteModel.getCpf());
+            preparedStatement.setString(3, clienteModel.getCelular01());
+            preparedStatement.setString(4, clienteModel.getCelular02());
+            preparedStatement.setString(5, clienteModel.getEmail());
+            preparedStatement.setString(6, clienteModel.getEndereco());
 
             preparedStatement.execute();
             connection.close();

@@ -6,8 +6,8 @@ public class ClienteModel {
 
     private Integer id;
     private String nome, cpf, celular01, celular02, endereco, email;
-
     private Date dataNascimento;
+
 
     public Integer getId() {
         return id;
