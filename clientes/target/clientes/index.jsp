@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="salvar">
-                <input type="button" value="salvar">
+                <button>Salvar</button>
             </div>
         </div>
     </div>

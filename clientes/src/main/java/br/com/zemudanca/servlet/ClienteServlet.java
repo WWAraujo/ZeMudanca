@@ -35,6 +35,11 @@ public class ClienteServlet extends HttpServlet {
 
         new ClienteDao().salvarCliente(clienteModel);
         System.out.println("Seu nome é "+clienteModel.getNome());
+        System.out.println("Seu cpf é "+clienteModel.getCpf());
+        System.out.println("Seu celular 1 "+clienteModel.getCelular01());
+        System.out.println("Seu celular 2 "+clienteModel.getCelular02());
+        System.out.println("Seu email  "+clienteModel.getEmail());
+        System.out.println("Seu endereco "+clienteModel.getEndereco());
 
         req.getRequestDispatcher("index.jsp");
     }

@@ -23,3 +23,6 @@ create table cliente (
 		endereco_cli varchar (50),
 		email_cli varchar (50),
 		data_nascimento_cli date);
+
+
+SELECT * FROM CLIENTE
