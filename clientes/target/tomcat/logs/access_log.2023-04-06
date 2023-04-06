@@ -18,3 +18,9 @@
 0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:37:47 -0300] "GET /src/resources/image/icons8-em-tr%C3%A2nsito-50.png HTTP/1.1" 404 1051 http-bio-8080-exec-3 2
 0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:37:47 -0300] "GET /lista-de-controle.jpg HTTP/1.1" 404 993 http-bio-8080-exec-4 1
 0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:37:47 -0300] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-5 1
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:42:11 -0300] "GET / HTTP/1.1" 200 4132 http-bio-8080-exec-1 38
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:42:11 -0300] "GET /src/resources/image/icons8-em-tr%C3%A2nsito-50.png HTTP/1.1" 404 1051 http-bio-8080-exec-3 2
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:42:11 -0300] "GET /lista-de-controle.jpg HTTP/1.1" 404 993 http-bio-8080-exec-4 1
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:42:33 -0300] "POST /create-cliente HTTP/1.1" 200 4132 http-bio-8080-exec-5 18
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:42:33 -0300] "GET /src/resources/image/icons8-em-tr%C3%A2nsito-50.png HTTP/1.1" 404 1051 http-bio-8080-exec-6 2
+0:0:0:0:0:0:0:1 - - [06/Apr/2023:14:42:33 -0300] "GET /lista-de-controle.jpg HTTP/1.1" 404 993 http-bio-8080-exec-7 1

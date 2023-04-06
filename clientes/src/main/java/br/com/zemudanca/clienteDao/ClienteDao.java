@@ -27,7 +27,7 @@ public class ClienteDao {
             preparedStatement.execute();
             connection.close();
 
-
+            System.out.println("Gravação feita com sucesso de "+clienteModel.getNome()+". ");
 
         }catch (Exception exception){
             System.out.println("Erro na conexão");
