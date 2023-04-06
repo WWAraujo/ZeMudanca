@@ -1,18 +1,9 @@
-drop table if exists cliente;
-
-create table cliente (
-		cod_cli int primary key auto_increment,
-		nome_cli varchar (50) not null,
-		cpf_cli varchar (14) not null unique,
-		celular1_cli varchar (15),
-		celular2_cli varchar (15),
-		endereco_cli varchar (50) not null,
-		email_cli varchar (50) not null,
-		data_nascimento_cli date);
 
 ========================================================================
 
 Versão de teste
+
+drop table if exists cliente;
 
 create table cliente (
 		cod_cli int primary key auto_increment,
@@ -24,5 +15,32 @@ create table cliente (
 		email_cli varchar (50),
 		data_nascimento_cli date);
 
+========================================================================
 
 SELECT * FROM CLIENTE
+
+========================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================================================================
+
+create table cliente (
+		cod_cli int primary key auto_increment,
+		nome_cli varchar (50) not null,
+		cpf_cli varchar (14) not null unique,
+		celular1_cli varchar (15),
+		celular2_cli varchar (15),
+		endereco_cli varchar (50) not null,
+		email_cli varchar (50) not null,
+		data_nascimento_cli date);
