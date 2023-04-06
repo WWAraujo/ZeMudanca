@@ -3,9 +3,9 @@
 
 Versão de teste
 
-drop table if exists cliente;
+DROP TABLE IF EXISTS CLIENTE;
 
-create table cliente (
+CREATE TABLE cliente (
 		cod_cli int primary key auto_increment,
 		nome_cli varchar (50),
 		cpf_cli varchar (14),
