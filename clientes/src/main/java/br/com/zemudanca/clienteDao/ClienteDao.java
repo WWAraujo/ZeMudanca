@@ -27,6 +27,8 @@ public class ClienteDao {
             preparedStatement.execute();
             connection.close();
 
+
+
         }catch (Exception exception){
             System.out.println("Erro na conexão");
         }
