@@ -57,19 +57,19 @@
 }
 
 .cdt-nome {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+
     font-size: 18px;
     font-family: 'Inter', sans-serif;
 }
 
 .cdt-nome input {
+    margin-top: 5px;
     border: 1.9px solid;
     padding:0px 20px;
     width: 630px;
     height: 33px;
-    font-size: 18px;
+    font-size: 16px;
+    text-transform: Uppercase;
     font-family: 'Inter', sans-serif;
     border-radius: 10px;
     box-shadow: -2px 5px 5px #a0a0a0;
@@ -84,27 +84,24 @@
     font-size: 18px;
     padding-left: 20px;
 }
+
 .ctd-cpf {
     padding-right: 20px;
 }
-.ctd-cpf input{
-    border: 1.9px solid;
+
+.ctd-cpf input,
+.ctd-data input{
     margin-top: 5px;
+    border: 1.9px solid;
     border-radius: 10px;
     width: 285px;
     height: 33px;
     padding:0px 20px;
     box-shadow: -2px 5px 5px #a0a0a0;
+    font-size: 16px;
+    text-transform: Uppercase;
 }
-.ctd-data input {
-    border: 1.9px solid;
-    margin-top: 5px;
-    border-radius: 10px;
-    width: 285px;
-    height: 33px;
-    padding:0px 20px;
-    box-shadow: -2px 5px 5px #a0a0a0;
-}
+
 .telefones {
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -121,6 +118,8 @@
     height: 33px;
     padding:0px 20px;
     box-shadow: -2px 5px 5px #a0a0a0;
+    font-size: 16px;
+    text-transform: Uppercase;
 }
 .ctd-telf1 {
     padding-right: 20px;
@@ -143,6 +142,8 @@
     height: 33px;
     border-radius: 10px;
     box-shadow: -2px 5px 5px #a0a0a0;
+    font-size: 16px;
+    text-transform: Uppercase;
 }
 
 .salvar {
@@ -172,20 +173,6 @@
     color: white;
 }
 
-.pesquisa button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    background-image: url("documento.png");
-    background-size: 35px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: 1px solid transparent;
-}
-
 .tabela {
     display: flex;
     flex-direction: column;
@@ -208,6 +195,7 @@ table tr td{
     width: 150px;
     height: 35px;
 }
+
 table tr td:hover {
     cursor: pointer;
     transition: 0.25s;
@@ -227,6 +215,7 @@ tr:nth-child(even) {
     height: 50px;
     padding: 5px;
 }
+
 .rodape p{
     text-align: center;
     color: #ffffff;

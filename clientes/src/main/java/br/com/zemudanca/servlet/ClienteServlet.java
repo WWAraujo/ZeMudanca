@@ -2,7 +2,6 @@ package br.com.zemudanca.servlet;
 
 import br.com.zemudanca.clienteDao.ClienteDao;
 import br.com.zemudanca.model.ClienteModel;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
