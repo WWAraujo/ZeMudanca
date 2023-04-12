@@ -2,7 +2,6 @@ package br.com.zemudanca.servlet;
 
 import br.com.zemudanca.clienteDao.ClienteDao;
 import br.com.zemudanca.model.ClienteModel;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,6 +40,6 @@ public class ClienteServlet extends HttpServlet {
         System.out.println("Seu email  "+clienteModel.getEmail());
         System.out.println("Seu endereco "+clienteModel.getEndereco());
 
-        req.getRequestDispatcher("index.jsp");
+        req.getRequestDispatcher("index.html").forward(req, resp);
     }
 }
