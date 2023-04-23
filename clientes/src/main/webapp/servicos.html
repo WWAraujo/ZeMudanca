@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="pt-br">
-    <link rel="stylesheet" href="index.css">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="servicos.css">
     <link rel="icon" type="image/x-icon" href="caminhao.png">
-    <title>Clientes</title>
 </head>
 <header>
     <div class="cabecalho">
@@ -20,43 +17,39 @@
 <body>
     <div class="container">
         <div class="titulo">
-            <h1>CLIENTES</h1>
+            <h1>SERVIÇOS</h1>
         </div>
         <form method="post" action="/create-cliente">
             <div class="cadastro">
-                <div class="cdt-nome">
-                    <label for="nome">Nome</label><br>
-                    <input type="text" id="nome" name="nome">
+                <div class="os">
+                    <label for="os">OS Nº:</label><br>
+                    <input type="text" id="os" name="os">
+                </div>
+                <div class="cliente">
+                    <label for="cliente">Cliente:</label><br>
+                    <input type="text" id="cliente" name="cliente">
+                </div>
+                <div class="servico">
+                    <label for="servico">Serviço:</label><br>
+                    <input type="text" id="servico" name="servico">
+                </div>
+                <div class="retirada">
+                    <label for="retirada">Endereço de Retirada:</label><br>
+                    <input type="text" id="retirada" name="retirada">
+                </div>
+                <div class="entrega">
+                    <label for="entrega">Endereço de Entrega:</label><br>
+                    <input type="text" id="entrega" name="entrega">
+                </div>
+                <div class="data-hora">
+                    <div class="data">
+                        <label for="data">Data da Retirada</label><br>
+                        <input type="date" id="data" name="data">
+                    </div>
 
-                </div>
-                <div class="cpf-data">
-                    <div class="ctd-cpf">
-                        <label for="cpf">CPF</label><br>
-                        <input type="text" id="cpf" name="cpf">
-                    </div>
-                    <div class="ctd-data">
-                        <label for="data-nascimento">Data de Nascimento</label><br>
-                        <input type="text" id="data-nascimento" name="data-nascimento">
-                    </div>
-                </div>
-                <div class="telefones">
-                    <div class="ctd-telf1">
-                        <label for="telefone-1">Telefone 1</label><br>
-                        <input type="text" id="telefone-1" name="telefone-1">
-                    </div>
-                    <div class="ctd-telf2">
-                        <label for="telefone-2">Telefone 2</label><br>
-                        <input type="text" id="telefone-2" name="telefone-2">
-                    </div>
-                </div>
-                <div class="ctd-part3">
-                    <div class="telf1">
-                        <label for="email">E-mail</label><br>
-                        <input type="text" id="email" name="email">
-                    </div>
-                    <div class="telf2">
-                        <label for="endereco">Endere&ccedil;o</label><br>
-                        <input type="text" id="endereco" name="endereco">
+                    <div class="hora">
+                        <label for="hora">Hora da Retirada:</label><br>
+                        <input type="time" id="hora" name="hora">
                     </div>
                 </div>
                 <div class="salvar">
@@ -113,4 +106,5 @@
             Reservados.</p>
     </div>
 </footer>
+
 </html>

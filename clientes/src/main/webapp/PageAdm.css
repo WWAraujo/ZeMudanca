@@ -1,5 +1,8 @@
-body{
+body, html{
     background-color: blue;
+    background-image: linear-gradient(blue , cyan);
+    margin: 0;
+    padding: 0;
 }
 
 img{
@@ -15,6 +18,8 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 .bottons button{

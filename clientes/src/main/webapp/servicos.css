@@ -1,6 +1,7 @@
-html,body{
-    margin:0;
+html,
+body {
     padding: 0;
+    margin: 0;
 }
 
 .container{
@@ -11,10 +12,8 @@ html,body{
     position: relative;
     width: 100%;
     height: 100%;
-    bottom:0;
-    margin-top: auto;
-    margin-bottom: 0;
     z-index: 1;
+    margin: 0;
     padding: 0;
 }
 
@@ -26,6 +25,7 @@ html,body{
     height: 100px;
     padding: 5px;
 }
+
 .img-cabecalho {
     display: flex;
     background-color: white;
@@ -35,16 +35,14 @@ html,body{
     padding: 0px 5px;
 }
 
-.img-cabecalho img{
+.img-cabecalho img {
     width: 100px;
 }
 
 .titulo h1 {
+    font-family: "Inter", sans-serif;
     font-size: 50px;
-    font-family: 'Inter', sans-serif;
     font-weight: 100;
-    justify-content: center;
-    text-align: center;
 }
 
 .cadastro {
@@ -52,7 +50,7 @@ html,body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 .cadastro::before{
@@ -71,17 +69,19 @@ html,body{
     z-index: -1;
 }
 
-.cdt-nome {
-
+.os {
     font-size: 18px;
     font-family: 'Inter', sans-serif;
+    width: 675px;
 }
 
-.cdt-nome input {
+.os input {
+    margin-left: 0;
     margin-top: 5px;
+    margin-bottom: 5px;
     border: 1.9px solid;
-    padding:0px 20px;
-    width: 630px;
+    padding: 0px 20px;
+    width: 50px;
     height: 33px;
     font-size: 16px;
     text-transform: Uppercase;
@@ -90,72 +90,106 @@ html,body{
     box-shadow: -2px 5px 5px #a0a0a0;
 }
 
-.cpf-data {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
+.cliente,
+.servico,
+.retirada,
+.entrega {
+    padding: 5px 20px;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     padding-left: 20px;
 }
 
-.ctd-cpf {
-    padding-right: 20px;
-}
-
-.ctd-cpf input,
-.ctd-data input{
+.cliente input {
     margin-top: 5px;
     border: 1.9px solid;
     border-radius: 10px;
-    width: 285px;
+    width: 630px;
     height: 33px;
-    padding:0px 20px;
+    padding: 0px 20px;
     box-shadow: -2px 5px 5px #a0a0a0;
     font-size: 16px;
     text-transform: Uppercase;
 }
 
-.telefones {
-    font-family: 'Inter', sans-serif;
+.servico input {
+    border: 1.9px solid;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 630px;
+    height: 33px;
+    padding: 0px 20px;
+    box-shadow: -2px 5px 5px #a0a0a0;
+    font-size: 16px;
+    text-transform: Uppercase;
+}
+
+.retirada input {
+    border: 1.9px solid;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 630px;
+    height: 33px;
+    padding: 0px 20px;
+    box-shadow: -2px 5px 5px #a0a0a0;
+    font-size: 16px;
+    text-transform: Uppercase;
+}
+
+.entrega input {
+    border: 1.9px solid;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 630px;
+    height: 33px;
+    padding: 0px 20px;
+    box-shadow: -2px 5px 5px #a0a0a0;
+    font-size: 16px;
+    text-transform: Uppercase;
+}
+
+.data-hora {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 18px;
+    margin-top: 5px;
 }
 
-.telefones input{
+.data {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    position: relative;
+    margin-right: 40px;
+}
+
+.data input {
+    margin-right: 2px;
     border: 1.9px solid;
     margin-top: 5px;
     border-radius: 10px;
-    width: 285px;
+    width: 270px;
     height: 33px;
-    padding:0px 20px;
+    padding: 0px 20px;
     box-shadow: -2px 5px 5px #a0a0a0;
     font-size: 16px;
     text-transform: Uppercase;
 }
-.ctd-telf1 {
-    padding-right: 20px;
-}
 
-.ctd-part3 {
-    padding: 20px;
-    font-size: 18px;
+.hora {
     font-family: 'Inter', sans-serif;
-}
-.telf1 {
-    padding-bottom: 15px;
+    font-size: 18px;
+    position: relative;
+    
 }
 
-.ctd-part3 input {
+.hora input {
+    margin-right: 2px;
     border: 1.9px solid;
-    padding:0px 20px;
     margin-top: 5px;
-    width: 630px;
-    height: 33px;
     border-radius: 10px;
+    width: 270px;
+    height: 33px;
+    padding: 0px 20px;
     box-shadow: -2px 5px 5px #a0a0a0;
     font-size: 16px;
     text-transform: Uppercase;
@@ -225,17 +259,20 @@ tr:nth-child(even) {
 
 .rodape {
     display: flex;
-    align-content: center;
-    justify-content:center;
+    flex-direction: column;
+    align-items: center;
     background-color: blue;
-    height: 80px;
+    width: 100vw;
+    height: 100px;
     padding: 5px;
-    margin-bottom: 0;
-    width: 100vw;}
+}
 
 .rodape p{
     text-align: center;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Inter', sans-serif;
-    line-height: 1.5;}
+    line-height: 1.5;
+
+}
+

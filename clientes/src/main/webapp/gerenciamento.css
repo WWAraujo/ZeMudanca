@@ -1,83 +1,108 @@
-html,body{
-    margin:0;
+body, html{
+    margin: 0px;
     padding: 0;
 }
-
 .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    bottom:0;
-    margin-top: auto;
-    margin-bottom: 0;
-    z-index: 1;
-    padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100%;
+        z-index: 1;
 }
 
 .cabecalho {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     background-color: blue;
-    height: 100px;
+    position: relative;
+    width: 100vw;
+    height: 110px;
     padding: 5px;
 }
+
 .img-cabecalho {
     display: flex;
     background-color: white;
     border-radius: 100px;
     width: 100px;
-    height: 100px;
-    padding: 0px 5px;
 }
 
-.img-cabecalho img{
+.img-cabecalho img {
     width: 100px;
 }
 
-.titulo h1 {
+.titulos h1 {
+    font-family: "Inter", sans-serif;
     font-size: 50px;
-    font-family: 'Inter', sans-serif;
     font-weight: 100;
-    justify-content: center;
+    margin-top: 35px;
+}
+
+.titulos h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 100;
     text-align: center;
+    margin-top: 35px;
 }
 
-.cadastro {
+.opcao {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.toggle {
     position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    background-color: rgb(231, 230, 239);
+    margin: 5px 30px;
 }
 
-.cadastro::before{
-    content:" ";
-    background-image: url("../resources/image/caminhao.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
+.toggle::before{
+    content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.20;
-    z-index: -1;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color:blue;
+    border: 1px solid blue;
+    transition: 0.5s;
+    box-shadow: 0px 0px 8px cyan;
 }
 
-.cdt-nome {
+.toggle.active::before{
+    left: calc(100% - 38px);
+}
 
+.opcao h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.dadosPesquisa, .periodo{
+    font-family: "Inter", sans-serif;
     font-size: 18px;
-    font-family: 'Inter', sans-serif;
 }
 
-.cdt-nome input {
+.dadosPesquisa{
+    margin-top: 35px;
+}
+
+.dadosPesquisa input {
     margin-top: 5px;
     border: 1.9px solid;
     padding:0px 20px;
@@ -88,80 +113,37 @@ html,body{
     font-family: 'Inter', sans-serif;
     border-radius: 10px;
     box-shadow: -2px 5px 5px #a0a0a0;
+} 
+.periodo{
+    margin-top: 15px;
 }
 
-.cpf-data {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    padding-left: 20px;
+.inicial{
+    border: 1px solid red;
 }
 
-.ctd-cpf {
-    padding-right: 20px;
+.final{
+    border: 1px solid red;
 }
 
-.ctd-cpf input,
-.ctd-data input{
-    margin-top: 5px;
+.periodo input {
+    margin-top:5px;
     border: 1.9px solid;
-    border-radius: 10px;
-    width: 285px;
+    padding:0px 10px;
+    width: 300px;
     height: 33px;
-    padding:0px 20px;
-    box-shadow: -2px 5px 5px #a0a0a0;
     font-size: 16px;
-    text-transform: Uppercase;
-}
-
-.telefones {
     font-family: 'Inter', sans-serif;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 18px;
-}
-
-.telefones input{
-    border: 1.9px solid;
-    margin-top: 5px;
-    border-radius: 10px;
-    width: 285px;
-    height: 33px;
-    padding:0px 20px;
-    box-shadow: -2px 5px 5px #a0a0a0;
-    font-size: 16px;
-    text-transform: Uppercase;
-}
-.ctd-telf1 {
-    padding-right: 20px;
-}
-
-.ctd-part3 {
-    padding: 20px;
-    font-size: 18px;
-    font-family: 'Inter', sans-serif;
-}
-.telf1 {
-    padding-bottom: 15px;
-}
-
-.ctd-part3 input {
-    border: 1.9px solid;
-    padding:0px 20px;
-    margin-top: 5px;
-    width: 630px;
-    height: 33px;
     border-radius: 10px;
     box-shadow: -2px 5px 5px #a0a0a0;
-    font-size: 16px;
-    text-transform: Uppercase;
+    cursor: pointer;
+} 
+
+.periodo #dataHoraInicial{
+    margin-right: 22px;
 }
 
-.salvar {
+.gerar {
     display: inline-block;
     align-items: center;
     text-align: center;
@@ -169,10 +151,10 @@ html,body{
     padding-bottom: 25px;
 }
 
-.salvar input{
+.gerar button{
     background-color: #ffffff;
     display: inline-block;
-    border: 2px solid blue;
+    border: 1.5px solid blue;
     width: 343px;
     height: 60px;
     border-radius: 40px;
@@ -182,17 +164,18 @@ html,body{
     color: blue;
 }
 
-.salvar input:hover{
+.gerar button:hover{
     cursor: pointer;
     background-color: blue;
     color: white;
 }
 
-.tabela {
+.resultado {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    
 }
 
 table{
@@ -239,3 +222,11 @@ tr:nth-child(even) {
     font-size: 18px;
     font-family: 'Inter', sans-serif;
     line-height: 1.5;}
+
+.tabela resultado{
+    background-color: silver;
+    width: 665px;
+    height: 400px;
+    border-radius: 10px;
+}
+

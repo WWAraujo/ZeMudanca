@@ -1,14 +1,17 @@
-body{
+body, html{
     background-color: blue;
+    background-image: linear-gradient(blue , cyan);
+    margin: 0;
+    padding: 0;
 }
 
 .login{
     display:flex;
-    height: 100vh;
-    width: 100vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 .login h1{
@@ -38,7 +41,10 @@ img{
     height: 40px;
     border: 1px solid transparent;
     border-radius: 10px;
+    font-size:20px;
+    outline: 0;
 }
+
 .login button{
     text-align: center;
     justify-content: center;
@@ -54,13 +60,16 @@ img{
     text-decoration: none;
     font-weight: bold;
     color: #000;
-    padding: 9px 65px;
     font-size: 20px;
+    padding: 7px 60px;
 }
 .login button:hover{
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.1s;
     width: 201px;
     height: 41px;
-    box-shadow: 0px 0px 10px #ffffff;
+    box-shadow: 0px 0px 10px 1px blue ;
+}
+.login button a:hover{
+    color: #1e90ff;
 }
