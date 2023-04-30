@@ -1,3 +1,4 @@
-br\com\zemudanca\clienteDao\ClienteDao.class
+br\com\zemudanca\model\Cliente.class
+br\com\zemudanca\dao\ClienteDAO.class
 br\com\zemudanca\servlet\ClienteServlet.class
-br\com\zemudanca\model\ClienteModel.class
+br\com\zemudanca\servlet\ListaClienteServlet.class

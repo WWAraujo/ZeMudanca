@@ -8,6 +8,22 @@ public class Cliente {
     private String nome, cpf, celular01, celular02, endereco, email;
     private Date dataNascimento;
 
+    public Cliente(Integer id, String nome, String cpf, String celular01, String endereco) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.celular01 = celular01;
+        this.endereco = endereco;
+    }
+
+    public Cliente(String nome, String cpf, String celular01, String celular02, String endereco, String email) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.celular01 = celular01;
+        this.celular02 = celular02;
+        this.endereco = endereco;
+        this.email = email;
+    }
 
     public Integer getId() {
         return id;

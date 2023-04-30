@@ -1,5 +1,7 @@
 package br.com.zemudanca.servlet;
 
+import br.com.zemudanca.dao.ClienteDAO;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/create-cliente")
-public class Cliente extends HttpServlet {
+public class ClienteServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -20,16 +22,9 @@ public class Cliente extends HttpServlet {
         String email = req.getParameter("email");
         String endereco = req.getParameter("endereco");
 
-        br.com.zemudanca.model.Cliente cliente = new br.com.zemudanca.model.Cliente();
-        cliente.setNome(nomeCli);
-        cliente.setCpf(cpf);
-        cliente.setCelular01(celularl01);
-        cliente.setCelular02(celularl02);
-        cliente.setEmail(email);
-        cliente.setEndereco(endereco);
+        br.com.zemudanca.model.Cliente cliente = new br.com.zemudanca.model.Cliente(nomeCli,cpf,celularl01,celularl02,endereco,email);
 
-
-        new br.com.zemudanca.dao.Cliente().salvarCliente(cliente);
+        new ClienteDAO().salvarCliente(cliente);
         System.out.println("Seu nome é "+ cliente.getNome());
         System.out.println("Seu cpf é "+ cliente.getCpf());
         System.out.println("Seu celular 1 "+ cliente.getCelular01());
@@ -37,6 +32,6 @@ public class Cliente extends HttpServlet {
         System.out.println("Seu email  "+ cliente.getEmail());
         System.out.println("Seu endereco "+ cliente.getEndereco());
 
-        req.getRequestDispatcher("index.html").forward(req, resp);
+        resp.sendRedirect("/find-all-clientes");
     }
 }
