@@ -2,7 +2,7 @@ package br.com.zemudanca.model;
 
 import java.util.Date;
 
-public class ClienteModel {
+public class Cliente {
 
     private Integer id;
     private String nome, cpf, celular01, celular02, endereco, email;
