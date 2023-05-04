@@ -175,7 +175,6 @@ body, html{
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
-    
 }
 
 table{
@@ -194,6 +193,11 @@ table tr td{
     width: 150px;
     height: 35px;
     border-radius: 5px;
+}
+
+table, th td{
+    font-family: 'Inter', sans-serif;
+    text-align: center;
 }
 
 table tr td:hover {

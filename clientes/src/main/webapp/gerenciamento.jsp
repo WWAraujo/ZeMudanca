@@ -42,43 +42,18 @@
         <div class="resultado">
             <table>
                 <tr>
-                    <th>ID</th>
+                    <th>Maticula</th>
                     <th>Nome</th>
                     <th>Telefone</th>
                     <th>Endere&ccedil;o</th>
                     <th>OS's</th>
                 </tr>
-                <c:forEach var="clientes" items="${allClientes}">
+                <c:forEach var="cliente" items="${allClientes}">
                 <tr>
-                    <td colspan="5"></td>
-                    <td>${clientes.nomeCli}</td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
+                    <td>${cliente.id}</td>
+                    <td>${cliente.nome}</td>
+                    <td>${cliente.celular01}</td>
+                    <td>${cliente.endereco}</td>
                 </tr>
                 </c:forEach>
             </table>

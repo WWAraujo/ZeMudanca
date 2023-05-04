@@ -21,7 +21,7 @@ public class ListaClienteServlet extends HttpServlet {
 
         req.setAttribute("allClientes", allClientes);
 
-        req.getRequestDispatcher("gerenciamento.html").forward(req, resp);
+        req.getRequestDispatcher("gerenciamento.jsp").forward(req, resp);
 
 
     }
