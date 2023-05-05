@@ -23,6 +23,5 @@ public class ListaClienteServlet extends HttpServlet {
 
         req.getRequestDispatcher("gerenciamento.jsp").forward(req, resp);
 
-
     }
 }

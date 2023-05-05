@@ -58,11 +58,11 @@
                         <td>${cliente.celular01}</td>
                         <td>${cliente.endereco}</td>
                         <td>
-                            <button type="submit"> E </button>
-                            <span> | </span>
-                            <form action="/delete-car" method="post">
+                            <a href="index.jsp?id=${cliente.id}&name=${cliente.nome}">Update</a>
+
+                            <form action="/delete-cliente" method="post">
                                 <input type="hidden" id="id" name="id" value="${cliente.id}">
-                                <button type="submit"> X </button>
+                                <button type="submit"> Delete </button>
                             </form>
                         </td>
 

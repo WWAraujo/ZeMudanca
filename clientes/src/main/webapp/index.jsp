@@ -26,7 +26,7 @@
             <div class="cadastro">
                 <div class="cdt-nome">
                     <label for="nome">Nome</label><br>
-                    <input type="text" id="nome" name="nome">
+                    <input type="text" id="nome" name="nome" value=${param.name}>
 
                 </div>
                 <div class="cpf-data">

@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/delete-cliente")
-public class DeleteClienteServlet extends HttpServlet {
+@WebServlet("/alterar-cliente")
+public class AlterarClienteServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -18,7 +18,8 @@ public class DeleteClienteServlet extends HttpServlet {
         String cleinteId = req.getParameter("id");
 
         new ClienteDAO().deleteClienteById(cleinteId);
+        System.out.println("cliente alterado");
 
-        resp.sendRedirect("/find-all-clientes");
+        resp.sendRedirect("/create-cliente");
     }
 }
