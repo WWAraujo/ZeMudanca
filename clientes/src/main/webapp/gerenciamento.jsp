@@ -45,15 +45,27 @@
                     <th>Maticula</th>
                     <th>Nome</th>
                     <th>Telefone</th>
-                    <th>Endere&ccedil;o</th>
-                    <th>OS's</th>
+                    <th>Endereço</th>
+                    <th>Deletar</th>
+
+                    <th>OS</th>
                 </tr>
                 <c:forEach var="cliente" items="${allClientes}">
                 <tr>
-                    <td>${cliente.id}</td>
-                    <td>${cliente.nome}</td>
-                    <td>${cliente.celular01}</td>
-                    <td>${cliente.endereco}</td>
+
+                        <td>${cliente.id}</td>
+                        <td>${cliente.nome}</td>
+                        <td>${cliente.celular01}</td>
+                        <td>${cliente.endereco}</td>
+                        <td>
+                            <button type="submit"> E </button>
+                            <span> | </span>
+                            <form action="/delete-car" method="post">
+                                <input type="hidden" id="id" name="id" value="${cliente.id}">
+                                <button type="submit"> X </button>
+                            </form>
+                        </td>
+
                 </tr>
                 </c:forEach>
             </table>

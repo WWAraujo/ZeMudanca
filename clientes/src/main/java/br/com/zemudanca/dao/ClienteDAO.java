@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -79,6 +78,30 @@ public class ClienteDAO {
             System.out.println("falha na conexão");
 
             return Collections.emptyList();
+        }
+    }
+
+    public void deleteClienteById(String idCliente) {
+
+        String SQL = "DELETE CLIENTE WHERE COD_CLI = ?";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setString(1, idCliente);
+            preparedStatement.execute();
+
+            System.out.println("success on delete cliente with id: " + idCliente);
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+
         }
     }
 }
