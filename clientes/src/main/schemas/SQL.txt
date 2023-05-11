@@ -15,12 +15,15 @@ CREATE TABLE cliente (
 		email_cli varchar (50),
 		data_nascimento_cli date);
 
-========================================================================
-
-SELECT * FROM CLIENTE
-
-========================================================================
-
+CREATE TABLE login (
+		cod_cli int primary key auto_increment,
+		nome_cli varchar (50),
+		cpf_cli varchar (14),
+		celular1_cli varchar (15),
+		celular2_cli varchar (15),
+		endereco_cli varchar (50),
+		email_cli varchar (50),
+		data_nascimento_cli date);
 
 
 

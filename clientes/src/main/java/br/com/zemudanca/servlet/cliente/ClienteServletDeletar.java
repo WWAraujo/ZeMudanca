@@ -1,4 +1,4 @@
-package br.com.zemudanca.servlet;
+package br.com.zemudanca.servlet.cliente;
 
 import br.com.zemudanca.dao.ClienteDAO;
 
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/delete-cliente")
-public class DeleteClienteServlet extends HttpServlet {
+public class ClienteServletDeletar extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

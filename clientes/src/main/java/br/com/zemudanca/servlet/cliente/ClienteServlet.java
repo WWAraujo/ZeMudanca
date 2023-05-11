@@ -1,4 +1,4 @@
-package br.com.zemudanca.servlet;
+package br.com.zemudanca.servlet.cliente;
 
 import br.com.zemudanca.dao.ClienteDAO;
 

@@ -1,4 +1,4 @@
-package br.com.zemudanca.servlet;
+package br.com.zemudanca.servlet.cliente;
 
 import br.com.zemudanca.dao.ClienteDAO;
 import br.com.zemudanca.model.Cliente;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/find-all-clientes")
-public class ListaClienteServlet extends HttpServlet {
+public class ClienteServletListar extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

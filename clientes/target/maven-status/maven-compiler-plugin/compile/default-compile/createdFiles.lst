@@ -1,6 +1,9 @@
 br\com\zemudanca\model\Cliente.class
-br\com\zemudanca\servlet\ListaClienteServlet.class
-br\com\zemudanca\servlet\AlterarClienteServlet.class
 br\com\zemudanca\dao\ClienteDAO.class
-br\com\zemudanca\servlet\DeleteClienteServlet.class
-br\com\zemudanca\servlet\ClienteServlet.class
+br\com\zemudanca\servlet\cliente\ClienteServlet.class
+br\com\zemudanca\servlet\cliente\ClienteServletDeletar.class
+br\com\zemudanca\model\Login.class
+br\com\zemudanca\servlet\cliente\ClienteServletListar.class
+br\com\zemudanca\servlet\cliente\ClienteServletAlterar.class
+br\com\zemudanca\dao\LoginDAO.class
+br\com\zemudanca\servlet\login\LoginServlet.class
