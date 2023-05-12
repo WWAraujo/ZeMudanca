@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.UUID;
 
 @WebServlet("/create-cliente")
 public class ClienteServlet extends HttpServlet {
@@ -15,6 +16,7 @@ public class ClienteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        String uid = UUID.randomUUID().toString().replace("-", "");
         String nomeCli = req.getParameter("nome");
         String cpf = req.getParameter("cpf");
         String celularl01 = req.getParameter("telefone-1");
@@ -22,7 +24,7 @@ public class ClienteServlet extends HttpServlet {
         String email = req.getParameter("email");
         String endereco = req.getParameter("endereco");
 
-        br.com.zemudanca.model.Cliente cliente = new br.com.zemudanca.model.Cliente(nomeCli,cpf,celularl01,celularl02,endereco,email);
+        br.com.zemudanca.model.Cliente cliente = new br.com.zemudanca.model.Cliente(uid,nomeCli,cpf,celularl01,celularl02,endereco,email);
 
         new ClienteDAO().salvarCliente(cliente);
         System.out.println("Seu nome é "+ cliente.getNome());

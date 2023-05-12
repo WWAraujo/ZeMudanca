@@ -53,13 +53,13 @@ public class ClienteDAO {
 
             while (resultSet.next()) {
 
-                Integer idCli = resultSet.getInt("COD_CLI");
+                String idCli = resultSet.getString("COD_CLI");
                 String clienteNome = resultSet.getString("NOME_CLI");
                 String cpfCli = resultSet.getString("CPF_CLI");
                 String celular1Cli = resultSet.getString("CELULAR1_CLI");
-                //String celular2Cli = resultSet.getString("CELULAR2_CLI");
+                String celular2Cli = resultSet.getString("CELULAR2_CLI");
                 String enderecoCli = resultSet.getString("ENDERECO_CLI");
-                //String emailCli = resultSet.getString("EMAIL_CLI");
+                String emailCli = resultSet.getString("EMAIL_CLI");
 
                 Cliente cliente = new Cliente(idCli, clienteNome, cpfCli,celular1Cli,enderecoCli);
 

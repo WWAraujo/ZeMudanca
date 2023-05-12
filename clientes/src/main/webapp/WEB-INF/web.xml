@@ -25,4 +25,10 @@
     <welcome-file>login.html</welcome-file>
   </welcome-file-list>
 
+  <servlet>
+    <servlet-name>Load Database Servlet</servlet-name>
+    <servlet-class>br.com.zemudanca.schema.LoadDatabaseServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
 </web-app>

@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class Cliente {
 
-    private Integer id;
+    private String id;
     private String nome, cpf, celular01, celular02, endereco, email;
     private Date dataNascimento;
 
-    public Cliente(Integer id, String nome, String cpf, String celular01, String endereco) {
+    public Cliente(String id, String nome, String cpf, String celular01, String endereco) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -16,7 +16,8 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public Cliente(String nome, String cpf, String celular01, String celular02, String endereco, String email) {
+    public Cliente(String uid, String nome, String cpf, String celular01, String celular02, String endereco, String email) {
+        this.id = uid;
         this.nome = nome;
         this.cpf = cpf;
         this.celular01 = celular01;
@@ -25,11 +26,11 @@ public class Cliente {
         this.email = email;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
