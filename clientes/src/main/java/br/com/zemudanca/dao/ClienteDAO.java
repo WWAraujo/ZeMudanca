@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ClienteDAO {
 
-    public void salvarCliente(br.com.zemudanca.model.Cliente cliente){
+    public void salvarCliente(Cliente cliente){
 
         String SQL = "INSERT INTO cliente (nome_cli,cpf_cli,celular1_cli,celular2_cli,email_cli,endereco_cli) VALUES (?,?,?,?,?,?)";
 

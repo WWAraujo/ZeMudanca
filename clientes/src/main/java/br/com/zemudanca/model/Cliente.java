@@ -4,8 +4,7 @@ import java.util.Date;
 
 public class Cliente {
 
-    private String id;
-    private String nome, cpf, celular01, celular02, endereco, email;
+    private String id, nome, cpf, celular01, celular02, endereco, email;
     private Date dataNascimento;
 
     public Cliente(String id, String nome, String cpf, String celular01, String endereco) {
