@@ -12,11 +12,8 @@ import java.sql.DriverManager;
 public class LoadDatabaseServlet extends HttpServlet {
 
     public LoadDatabaseServlet(){
-
         createDatabase();
-
     }
-
 
     protected void createDatabase(){
 
