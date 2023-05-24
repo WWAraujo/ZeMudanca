@@ -1,9 +1,8 @@
 
 ========================================================================
 
-Versão de teste
-
 DROP TABLE IF EXISTS CLIENTE;
+DROP TABLE IF EXISTS SERVICO;
 
 CREATE TABLE cliente (
 		cod_cli int primary key auto_increment,
@@ -15,15 +14,20 @@ CREATE TABLE cliente (
 		email_cli varchar (50),
 		data_nascimento_cli date);
 
-CREATE TABLE login (
-		cod_cli int primary key auto_increment,
-		nome_cli varchar (50),
-		cpf_cli varchar (14),
-		celular1_cli varchar (15),
-		celular2_cli varchar (15),
-		endereco_cli varchar (50),
-		email_cli varchar (50),
-		data_nascimento_cli date);
+CREATE TABLE login(
+        UserId int primary key auto_increment,
+		userName varchar (5),
+		password varchar (5)
+);
+
+CREATE TABLE servico (
+		os_serv int primary key auto_increment,
+		id_cliente_serv varchar (50),
+		tipo_serv varchar (50),
+		retirada_serv varchar (50),
+		entrega_serv varchar (50),
+		data_serv varchar (50),
+		hora_serv varchar (50);
 
 
 

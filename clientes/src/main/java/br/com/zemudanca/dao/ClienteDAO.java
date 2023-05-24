@@ -68,15 +68,11 @@ public class ClienteDAO {
             }
 
             System.out.println("sucesso na busca de * clientes");
-
             connection.close();
-
             return clientes;
 
         } catch (Exception e){
-
             System.out.println("falha na conexão");
-
             return Collections.emptyList();
         }
     }

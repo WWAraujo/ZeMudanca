@@ -28,16 +28,19 @@
         <div class="titulo">
             <h1>SERVIÇOS</h1>
         </div>
-        <form method="post" action="/create-servicos">
+        <form method="post" action="/create-servico">
             <div class="cadastro">
+
                 <div class="os">
                     <label for="os">OS Nº:</label><br>
                     <input type="text" id="os" name="os">
                 </div>
+
                 <div class="cliente">
                     <label for="cliente">Cliente:</label><br>
                     <input type="text" id="cliente" name="cliente">
                 </div>
+
                 <div class="servico">
                     <label for="servico">Serviço:</label><br>
                     <input type="text" id="servico" name="servico">

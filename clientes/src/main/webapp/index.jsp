@@ -24,21 +24,24 @@
         </div>
         <form method="post" action="/create-cliente">
             <div class="cadastro">
+
                 <div class="cdt-nome">
                     <label for="nome">Nome</label><br>
                     <input type="text" id="nome" name="nome" value=${param.name}>
-
                 </div>
+
                 <div class="cpf-data">
                     <div class="ctd-cpf">
                         <label for="cpf">CPF</label><br>
                         <input type="text" id="cpf" name="cpf">
                     </div>
+
                     <div class="ctd-data">
                         <label for="data-nascimento">Data de Nascimento</label><br>
                         <input type="text" id="data-nascimento" name="data-nascimento">
                     </div>
                 </div>
+
                 <div class="telefones">
                     <div class="ctd-telf1">
                         <label for="telefone-1">Telefone 1</label><br>

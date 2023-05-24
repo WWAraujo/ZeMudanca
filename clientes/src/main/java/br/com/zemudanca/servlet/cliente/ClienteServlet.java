@@ -1,6 +1,7 @@
 package br.com.zemudanca.servlet.cliente;
 
 import br.com.zemudanca.dao.ClienteDAO;
+import br.com.zemudanca.model.Cliente;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +25,7 @@ public class ClienteServlet extends HttpServlet {
         String email = req.getParameter("email");
         String endereco = req.getParameter("endereco");
 
-        br.com.zemudanca.model.Cliente cliente = new br.com.zemudanca.model.Cliente(uid,nomeCli,cpf,celularl01,celularl02,endereco,email);
+        Cliente cliente = new Cliente(uid,nomeCli,cpf,celularl01,celularl02,endereco,email);
 
         new ClienteDAO().salvarCliente(cliente);
         System.out.println("Seu nome é "+ cliente.getNome());
