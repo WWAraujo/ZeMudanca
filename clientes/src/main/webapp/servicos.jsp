@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
     <title>Serviços</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pt-br">
     <link rel="stylesheet" href="servicos.css">
     <link rel="icon" type="image/x-icon" href="caminhao.png">
 </head>
@@ -25,7 +28,7 @@
         <div class="titulo">
             <h1>SERVIÇOS</h1>
         </div>
-        <form method="post" action="/create-cliente">
+        <form method="post" action="/create-servicos">
             <div class="cadastro">
                 <div class="os">
                     <label for="os">OS Nº:</label><br>
