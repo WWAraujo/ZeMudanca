@@ -16,29 +16,29 @@
         </div>
     </div>
     <div class="menu">
-          <a href="index.jsp">Clientes</a>
-          <a href="servicos.jsp">Serviços</a>
-          <a href="pageUser.jsp">Site</a>
-      </div>
+              <a href="index.jsp">Clientes</a>
+              <a href="servicos.jsp">Servi&ccedilos</a>
+              <a href="pageUser.jsp">Site</a>
+          </div>
 </header>
 </header>
 <body>
     <div class="container">
         <div class="titulos">
             <h1>GERENCIAMENTO</h1>
-            <h3>RELATÓRIO</h3>
+            <h3>RELAT&OacuteRIO</h3>
         </div>
         <div class="opcao">
             <h3>CLIENTES</h3>
             <button class="toggle"></button>
-            <h3>SERVIÇOS</h3>
+            <h3>SERVI&CcedilOS</h3>
         </div>
         <div class="dadosPesquisa">
-            <label for="nomeClienteounOS">Nome do Cliente ou Nº OS:</label><br>
+            <label for="nomeClienteounOS">Nome do Cliente ou N&deg OS:</label><br>
             <input type="text" id="nomeClienteounOS">
         </div>
         <div class="periodo">
-            <label for="nomeClienteounOS">Período:</label><br>
+            <label for="nomeClienteounOS">Per&iacuteodo:</label><br>
             <input type="datetime-local" id="dataHoraInicial" placeholder="Data e Hora Inicial">
             <input type="datetime-local" id="dataHoraFinal" placeholder="Data e Hora Final">
         </div>
@@ -51,7 +51,7 @@
                     <th>Maticula</th>
                     <th>Nome</th>
                     <th>Telefone</th>
-                    <th>Endereço</th>
+                    <th>Endere&ccedilo</th>
                     <th>Deletar</th>
 
                     <th>OS</th>

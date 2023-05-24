@@ -14,7 +14,7 @@
             <a href="index.jsp">CLIENTES</a>
         </button>
         <button>
-            <a href="servicos.jsp">SERVIÇOS</a>
+            <a href="servicos.jsp">SERVI&CcedilOS</a>
         </button>
         <button>
             <a href="gerenciamento.jsp">GERENCIAMENTO</a>

@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
-    <title>Serviços</title>
+    <title>Servi&ccedilos</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Language" content="pt-br">
@@ -16,23 +16,23 @@
             <img src="caminhao.png" alt="icone">
         </div>
     </div>
-    <div class="menu">
-          <a href="index.jsp">Clientes</a>
-          <a href="pageUser.jsp">Site</a>
-          <a href="gerenciamento.jsp">Relatórios</a>
-      </div>
 </header>
 
 <body>
+    <div class="menu">
+          <a href="index.jsp">Clientes</a>
+          <a href="pageUser.jsp">Site</a>
+          <a href="gerenciamento.jsp">Relat&oacuterios</a>
+    </div>
     <div class="container">
         <div class="titulo">
-            <h1>SERVIÇOS</h1>
+            <h1>SERVI&CcedilOS</h1>
         </div>
         <form method="post" action="/create-servico">
             <div class="cadastro">
 
                 <div class="os">
-                    <label for="os">OS Nº:</label><br>
+                    <label for="os">OS N&deg:</label><br>
                     <input type="text" id="os" name="os">
                 </div>
 
@@ -42,15 +42,15 @@
                 </div>
 
                 <div class="servico">
-                    <label for="servico">Serviço:</label><br>
+                    <label for="servico">Servi&ccedilo:</label><br>
                     <input type="text" id="servico" name="servico">
                 </div>
                 <div class="retirada">
-                    <label for="retirada">Endereço de Retirada:</label><br>
+                    <label for="retirada">Endere&ccedilo de Retirada:</label><br>
                     <input type="text" id="retirada" name="retirada">
                 </div>
                 <div class="entrega">
-                    <label for="entrega">Endereço de Entrega:</label><br>
+                    <label for="entrega">Endere&ccedilo de Entrega:</label><br>
                     <input type="text" id="entrega" name="entrega">
                 </div>
                 <div class="data-hora">

@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     z-index: 1;
     margin: 0;
@@ -21,8 +21,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     background-color: blue;
-    height: 100px;
+    position: relative;
+    width: 100vw;
+    height: 110px;
     padding: 5px;
 }
 
@@ -38,6 +41,25 @@ body {
 .img-cabecalho img {
     width: 100px;
 }
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu a{
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    margin: 10px 50px 0px 50px;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu a:hover{
+    text-decoration: underline;
+    }
 
 .titulo h1 {
     padding-top: 40px;
@@ -277,17 +299,3 @@ tr:nth-child(even) {
 
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 25px;
-    padding: 25px;
-
-}
-.menu a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: black;
-}
