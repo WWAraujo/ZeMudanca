@@ -20,7 +20,7 @@ public class LoadDatabaseServlet extends HttpServlet {
         try (Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa")){
 
             RunScript.execute(connection, new FileReader("src/main/resources/schemas.sql"));
-            System.out.println("Tabela criada login");
+            System.out.println("Tabela atualizada");
 
         } catch (Exception e){
             System.out.println(e.getMessage());

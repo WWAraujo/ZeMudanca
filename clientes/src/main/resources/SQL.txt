@@ -4,7 +4,7 @@
 DROP TABLE IF EXISTS CLIENTE;
 DROP TABLE IF EXISTS SERVICO;
 
-CREATE TABLE cliente (
+CREATE TABLE IF NOT EXISTS cliente (
 		cod_cli int primary key auto_increment,
 		nome_cli varchar (50),
 		cpf_cli varchar (14),
@@ -14,20 +14,21 @@ CREATE TABLE cliente (
 		email_cli varchar (50),
 		data_nascimento_cli date);
 
-CREATE TABLE login(
+CREATE TABLE IF NOT EXISTS login(
         UserId int primary key auto_increment,
 		userName varchar (5),
 		password varchar (5)
 );
 
-CREATE TABLE servico (
-		os_serv int primary key auto_increment,
+CREATE TABLE IF NOT EXISTS servico (
+		os_serv varchar (50),
 		id_cliente_serv varchar (50),
 		tipo_serv varchar (50),
 		retirada_serv varchar (50),
 		entrega_serv varchar (50),
 		data_serv varchar (50),
-		hora_serv varchar (50);
+		hora_serv varchar (50)
+);
 
 
 
