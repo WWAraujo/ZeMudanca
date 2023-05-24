@@ -17,7 +17,7 @@
     </div>
     <div class="menu">
           <a href="index.jsp">Clientes</a>
-          <a href="servicos.html">Serviços</a>
+          <a href="servicos.jsp">Serviços</a>
           <a href="gerenciamento.jsp">Relatórios</a>
       </div>
       

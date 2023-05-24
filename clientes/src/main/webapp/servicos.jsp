@@ -15,7 +15,7 @@
     </div>
     <div class="menu">
           <a href="index.jsp">Clientes</a>
-          <a href="pageUser.html">Site</a>
+          <a href="pageUser.jsp">Site</a>
           <a href="gerenciamento.jsp">Relatórios</a>
       </div>
 </header>

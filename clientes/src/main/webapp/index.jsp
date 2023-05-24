@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,36 +73,24 @@
                     <th>Endere&ccedil;o</th>
                     <th>A&ccedil&atildeo</th>
                 </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
+                <c:forEach var="cliente" items="${allClientes}">
+                    <tr>
+
+                        <td>${cliente.id}</td>
+                        <td>${cliente.nome}</td>
+                        <td>${cliente.celular01}</td>
+                        <td>${cliente.endereco}</td>
+                        <td>
+                            <a href="index.jsp?id=${cliente.id}&name=${cliente.nome}">Update</a>
+
+                            <form action="/delete-cliente" method="post">
+                                <input type="hidden" id="id" name="id" value="${cliente.id}">
+                                <button type="submit"> Delete </button>
+                            </form>
+                        </td>
+
+                    </tr>
+                </c:forEach>
             </table>
         </div>
     </div>

@@ -14,13 +14,13 @@
             <a href="index.jsp">CLIENTES</a>
         </button>
         <button>
-            <a href="servicos.html">SERVIÇOS</a>
+            <a href="servicos.jsp">SERVIÇOS</a>
         </button>
         <button>
             <a href="gerenciamento.jsp">GERENCIAMENTO</a>
         </button>
         <button>
-            <a href="pageUser.html">SITE</a>
+            <a href="pageUser.jsp">SITE</a>
         </button>
     </div>
 </body>
