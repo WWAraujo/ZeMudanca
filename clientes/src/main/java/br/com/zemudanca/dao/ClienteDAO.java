@@ -40,6 +40,7 @@ public class ClienteDAO {
         String SQL =  "SELECT * FROM CLIENTE";
 
         try {
+
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
             System.out.println("success in database connection");
