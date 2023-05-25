@@ -15,11 +15,12 @@ public class ClienteServletAlterar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String cleinteId = req.getParameter("id");
+        String clinteId = req.getParameter("id");
 
-        new ClienteDAO().deleteClienteById(cleinteId);
+        new ClienteDAO().deleteClienteById(clinteId);
         System.out.println("cliente alterado");
 
         resp.sendRedirect("/create-cliente");
     }
 }
+

@@ -64,7 +64,7 @@
                         <td>${cliente.celular01}</td>
                         <td>${cliente.endereco}</td>
                         <td>
-                            <a href="index.jsp?id=${cliente.id}&name=${cliente.nome}">Update</a>
+                            <a href="index.jsp?id=${cliente.id}&name=${cliente.nome}&=telefone-1${cliente.celular01}">Update</a>
 
                             <form action="/delete-cliente" method="post">
                                 <input type="hidden" id="id" name="id" value="${cliente.id}">
