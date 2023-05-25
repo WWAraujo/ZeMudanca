@@ -30,5 +30,4 @@
     <servlet-class>br.com.zemudanca.schema.LoadDatabaseServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
-
 </web-app>

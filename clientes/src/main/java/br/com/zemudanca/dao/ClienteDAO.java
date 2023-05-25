@@ -1,7 +1,6 @@
 package br.com.zemudanca.dao;
 
 import br.com.zemudanca.model.Cliente;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -42,6 +41,7 @@ public class ClienteDAO {
         String SQL =  "SELECT * FROM CLIENTE";
 
         try {
+
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
             System.out.println("success in database connection");
@@ -84,7 +84,6 @@ public class ClienteDAO {
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
             System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -92,13 +91,10 @@ public class ClienteDAO {
             preparedStatement.execute();
 
             System.out.println("success on delete cliente with id: " + idCliente);
-
             connection.close();
 
         } catch (Exception e) {
-
             System.out.println("fail in database connection");
-
         }
     }
 }
