@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="pageAdm.css">
-    <title>Zé Mudança</title>
+    <title>Z&eacute Mudan&ccedila</title>
     <link rel="icon" type="image/x-icon" href="caminhao.png">
 </head>
 <body>

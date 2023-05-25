@@ -58,7 +58,17 @@
                 <input type="text" id="email" name="email" placeholder="Email">
             </div>
         </form>
-        <button>SOLICITAR SERVI&CcedilO<img src="caminhao.png"></button>
+        <button onClick="servico()">SOLICITAR SERVI&CcedilO<img src="caminhao.png"></button>
+        <script>
+
+        function servico(){
+        var teste = document.querySelector("#nome");
+        var input = teste.value;
+        if(input != null){
+        alert("tst");
+        }
+        }
+        </script>
     </div>
     <div class="faleconosco">
         <div class="contatos">
