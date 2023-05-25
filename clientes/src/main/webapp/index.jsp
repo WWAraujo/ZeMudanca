@@ -18,6 +18,11 @@
     </div>
 </header>
 <body>
+    <div class="menu">
+        <a href="servicos.jsp">Servi&ccedilos</a>
+        <a href="pageUser.jsp">Site</a>
+        <a href="gerenciamento.jsp">Relat&oacuterios</a>
+    </div>
     <div class="container">
         <div class="titulo">
             <h1>CLIENTES</h1>

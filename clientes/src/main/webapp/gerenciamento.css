@@ -29,10 +29,31 @@ body, html{
     background-color: white;
     border-radius: 100px;
     width: 100px;
+    height: 100px;
+    padding: 0px 5px;
 }
 
 .img-cabecalho img {
     width: 100px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu a{
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    margin: 10px 50px 10px 50px;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu a:hover{
+    text-decoration: underline;
 }
 
 .titulos h1 {
@@ -232,18 +253,4 @@ tr:nth-child(even) {
     width: 665px;
     height: 400px;
     border-radius: 10px;
-}
-.menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 25px;
-    padding: 25px;
-    
-}
-.menu a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: black;
 }

@@ -22,10 +22,14 @@ html,body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     background-color: blue;
-    height: 100px;
+    position: relative;
+    width: 100vw;
+    height: 110px;
     padding: 5px;
 }
+
 .img-cabecalho {
     display: flex;
     background-color: white;
@@ -35,8 +39,28 @@ html,body{
     padding: 0px 5px;
 }
 
-.img-cabecalho img{
+.img-cabecalho img {
     width: 100px;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu a{
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    margin: 10px 50px 10px 50px;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu a:hover{
+    text-decoration: underline;
 }
 
 .titulo h1 {
@@ -173,7 +197,7 @@ html,body{
     background-color: #ffffff;
     display: inline-block;
     border: 2px solid blue;
-    width: 100px;
+    width: 200px;
     height: 60px;
     border-radius: 40px;
     font-size: 30px;
