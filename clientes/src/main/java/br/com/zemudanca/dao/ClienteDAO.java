@@ -17,6 +17,7 @@ public class ClienteDAO {
         String SQL = "INSERT INTO cliente (nome_cli,cpf_cli,celular1_cli,celular2_cli,email_cli,endereco_cli) VALUES (?,?,?,?,?,?)";
 
         try {
+
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
             System.out.println("Sucesso na conexão");
 
