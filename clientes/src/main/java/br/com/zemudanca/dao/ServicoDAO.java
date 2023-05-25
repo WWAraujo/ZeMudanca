@@ -1,8 +1,6 @@
 package br.com.zemudanca.dao;
 
 import br.com.zemudanca.model.Servico;
-
-import javax.swing.table.TableRowSorter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -45,7 +43,7 @@ public class ServicoDAO {
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            System.out.println("success in database connection");
+            System.out.println("success in database connection FIND ALL SERVICOS");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -55,7 +53,7 @@ public class ServicoDAO {
 
             while (resultSet.next()) {
 
-                String os = resultSet.getString("os_serv");
+                String os = resultSet.getString("OS-SERV");
                 String idCliente = resultSet.getString("id_cliente_serv");
                 String tipoServico = resultSet.getString("tipo_serv");
                 String retirada = resultSet.getString("retirada_serv");
@@ -84,7 +82,6 @@ public class ServicoDAO {
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
             System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -95,9 +92,7 @@ public class ServicoDAO {
             connection.close();
 
         } catch (Exception e) {
-
             System.out.println("fail in database connection");
-
         }
     }
 }

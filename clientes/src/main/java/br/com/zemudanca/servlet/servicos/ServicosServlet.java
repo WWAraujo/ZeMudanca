@@ -30,6 +30,6 @@ public class ServicosServlet extends HttpServlet {
 
         new ServicoDAO().salvarServico(servico);
 
-        resp.sendRedirect("/find-all-servicos");
+        resp.sendRedirect("/find-all-servico");
     }
 }

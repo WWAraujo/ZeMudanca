@@ -72,42 +72,30 @@
         <div class="tabela">
             <table>
                 <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>Endere&ccedil;o</th>
-                    <th>A&ccedil&atildeo</th>
+                    <th>OS</th>
+                    <th>Tipo serviço</th>
+                    <th>Retirada</th>
+                    <th>Entrega</th>
+                    <th>Açoes</th>
                 </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
+                <c:forEach var="servico" items="${allServicos}">
+                    <tr>
+
+                        <td>${servico.os}</td>
+                        <td>${servico.tipoServico}</td>
+                        <td>${servico.retirada}</td>
+                        <td>${servico.entrega}</td>
+                        <td>
+                            <a href="servicos.jsp?id=${servico.id}&name=${servico.tipoServico}">Update</a>
+
+                            <form action="/delete-servico" method="post">
+                                <input type="hidden" id="os" name="os" value="${servico.id}">
+                                <button type="submit"> Delete </button>
+                            </form>
+                        </td>
+
+                    </tr>
+                </c:forEach>
             </table>
         </div>
     </div>
