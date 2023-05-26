@@ -59,6 +59,10 @@ html,body{
     color: #000;
 }
 
+.form{
+height : 600px;
+}
+
 .menu a:hover{
     text-decoration: underline;
     }

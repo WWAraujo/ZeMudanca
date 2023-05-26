@@ -27,7 +27,7 @@
         <div class="titulo">
             <h1>CLIENTES</h1>
         </div>
-        <form method="post" action="/create-cliente">
+        <form method="post" action="/create-cliente" class="form">
             <div class="cadastro">
 
                 <div class="cdt-nome">
@@ -38,7 +38,7 @@
                 <div class="cpf-data">
                     <div class="ctd-cpf">
                         <label for="cpf">CPF</label><br>
-                        <input type="text" id="cpf" name="cpf">
+                        <input type="text" id="cpf" name="cpf" value=${param.cpf}>
                     </div>
 
                     <div class="ctd-data">

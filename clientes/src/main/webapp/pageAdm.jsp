@@ -11,10 +11,10 @@
     <div class="bottons">
         <img src="caminhao.png">
         <button>
-            <a href="index.jsp">CLIENTES</a>
+            <a href="/find-all-clientes">CLIENTES</a>
         </button>
         <button>
-            <a href="servicos.jsp">SERVI&CcedilOS</a>
+            <a href="/find-all-servico">SERVI&CcedilOS</a>
         </button>
         <button>
             <a href="gerenciamento.jsp">GERENCIAMENTO</a>

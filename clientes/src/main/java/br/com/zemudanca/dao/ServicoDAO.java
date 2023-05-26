@@ -38,7 +38,7 @@ public class ServicoDAO {
     }
 
     public List<Servico> findAllServicos() {
-        String SQL = "SELEC * FROM SERVICO";
+        String SQL = "SELECT * FROM SERVICO";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -53,7 +53,7 @@ public class ServicoDAO {
 
             while (resultSet.next()) {
 
-                String os = resultSet.getString("OS-SERV");
+                String os = resultSet.getString("OS_SERV");
                 String idCliente = resultSet.getString("id_cliente_serv");
                 String tipoServico = resultSet.getString("tipo_serv");
                 String retirada = resultSet.getString("retirada_serv");
