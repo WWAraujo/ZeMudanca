@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Language" content="pt-br">
-    <link rel="stylesheet" href="servico.css">
-    <link rel="icon" type="image/x-icon" href="caminhao.png">
+    <link rel="stylesheet" href="css/servico.css">
+    <link rel="icon" type="image/x-icon" href="img/caminhao.png">
 </head>
 <header>
     <div class="cabecalho">
         <div class="img-cabecalho">
-            <img src="caminhao.png" alt="icone">
+            <img src="img/caminhao.png" alt="icone">
         </div>
     </div>
 </header>

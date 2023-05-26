@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="gerenciamento.css">
-    <link rel="icon" type="image/x-icon" href="caminhao.png">
+    <link rel="stylesheet" href="css/gerenciamento.css">
+    <link rel="icon" type="image/x-icon" href="img/caminhao.png">
     <title>Gerenciamento</title>
 </head>
 <header>
     <div class="cabecalho">
         <div class="img-cabecalho">
-            <img src="caminhao.png" alt="icone">
+            <img src="img/caminhao.png" alt="icone">
         </div>
     </div>
     <div class="menu">

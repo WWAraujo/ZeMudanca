@@ -162,7 +162,7 @@ h3 {
 .formulario::before {
     display: flex;
     content: " ";
-    background-image: url("caminhao.png");
+    background-image: url("../img/caminhao.png");
     background-size: 100vi 1000px;
     background-repeat: no-repeat;
     background-position: center;

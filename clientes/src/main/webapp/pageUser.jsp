@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pageUser.css">
-    <link rel="icon" type="image/x-icon" href="caminhao.png">
+    <link rel="stylesheet" href="css/pageUser.css">
+    <link rel="icon" type="image/x-icon" href="img/caminhao.png">
     <title>Z&eacute Mudan&ccedila</title>
 </head>
 <header>
     <div class="cabecalho">
         <div class="img-cabecalho">
-            <img src="caminhao.png" alt="icone">
+            <img src="img/caminhao.png" alt="icone">
         </div>
     </div>
 </header>
@@ -28,8 +28,8 @@
             DE BENS, CONOSCO O SEU BEM SER&Aacute<br> PROTEGIDO DO INICIO AO FIM DO SERVI&CcedilO, MANTENDO TODA INTEGRIDADE E
             <br>PROTE&Ccedil&AtildeO.
         </h2>
-        <img id="entregadores" src="entregadores.png">
-        <img id="botaowpp" src="whatsapp.png">
+        <img id="entregadores" src="img/entregadores.png">
+        <img id="botaowpp" src="img/whatsapp.png">
     </div>
     <div class="quemsomos">
         <h1>QUEM SOMOS</h1>
@@ -40,11 +40,11 @@
             nossos
             clientes com<br>muito respeito, efici&ecircncia e carinho pelos seus<br>pertences. Mantendo a pontualidade e
             honrando os<br>prazos estabelecidos.</h3>
-        <img src="Rectangle 50.png">
+        <img src="img/Rectangle 50.png">
     </div>
     <div class="servicos">
         <h2>CONHE&CcedilA NOSSOS SERVI&CcedilOS</h2>
-        <img src="Rectangle 54.png">
+        <img src="img/Rectangle 54.png">
     </div>
     <div class="formulario">
         <h3>GOSTARIA DE CONTRATAR NOSSOS SERVI&CcedilOS?<br>PREENCHA ESSE PR&Eacute-FORMUL&AacuteRIO, QUE LOGO ENTRAREMOS EM CONTATO.
@@ -58,7 +58,7 @@
                 <input type="text" id="email" name="email" placeholder="Email">
             </div>
         </form>
-        <button onClick="servico()">SOLICITAR SERVI&CcedilO<img src="caminhao.png"></button>
+        <button onClick="servico()">SOLICITAR SERVI&CcedilO<img src="img/caminhao.png"></button>
         <script>
 
         function servico(){
@@ -79,12 +79,12 @@
         </div>
         <div class="redessociais">
             <p>Acesse nossas redes sociais</p>
-            <img id="instagram" src="instagram.png">
-            <img id="twitter" src="twitter.png">
-            <img id="youtube" src="youtube.png">
-            <img id="whatsapp" src="whatsapp.png">
+            <img id="instagram" src="img/instagram.png">
+            <img id="twitter" src="img/twitter.png">
+            <img id="youtube" src="img/youtube.png">
+            <img id="whatsapp" src="img/whatsapp.png">
         </div>
-        <img id="faleconoscoimg" src="FaleConosco 1.png">
+        <img id="faleconoscoimg" src="img/FaleConosco 1.png">
     </div>
 </body>
 <footer>
