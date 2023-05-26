@@ -21,12 +21,12 @@ public class ClienteDAO {
             System.out.println("Sucesso na conexão");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setString(1, cliente.getNome());
-            preparedStatement.setString(2, cliente.getCpf());
-            preparedStatement.setString(3, cliente.getCelular01());
-            preparedStatement.setString(4, cliente.getCelular02());
-            preparedStatement.setString(5, cliente.getEmail());
-            preparedStatement.setString(6, cliente.getEndereco());
+            preparedStatement.setString(1, cliente.getNome().toUpperCase());
+            preparedStatement.setString(2, cliente.getCpf().toUpperCase());
+            preparedStatement.setString(3, cliente.getCelular01().toUpperCase());
+            preparedStatement.setString(4, cliente.getCelular02().toUpperCase());
+            preparedStatement.setString(5, cliente.getEmail().toUpperCase());
+            preparedStatement.setString(6, cliente.getEndereco().toUpperCase());
 
             preparedStatement.execute();
             connection.close();
