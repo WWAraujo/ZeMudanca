@@ -1,4 +1,4 @@
-package br.com.zemudanca.servlet.servicos;
+package br.com.zemudanca.servlet.servico;
 
 import br.com.zemudanca.dao.ServicoDAO;
 import br.com.zemudanca.model.Servico;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 @WebServlet("/create-servico")
-public class ServicosServlet extends HttpServlet {
+public class ServicoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

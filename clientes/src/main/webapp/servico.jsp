@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Language" content="pt-br">
-    <link rel="stylesheet" href="servicos.css">
+    <link rel="stylesheet" href="servico.css">
     <link rel="icon" type="image/x-icon" href="caminhao.png">
 </head>
 <header>
@@ -33,12 +33,12 @@
 
                 <div class="os">
                     <label for="os">OS N&deg:</label><br>
-                    <input type="text" id="os" name="os">
+                    <input type="text" id="os" name="os" value=${param.os}>
                 </div>
 
                 <div class="cliente">
                     <label for="cliente">Cliente:</label><br>
-                    <input type="text" id="cliente" name="cliente">
+                    <input type="text" id="cliente" name="cliente" value=${param.endereco}>
                 </div>
 
                 <div class="servico">
@@ -72,42 +72,30 @@
         <div class="tabela">
             <table>
                 <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>Endere&ccedil;o</th>
+                    <th>OS</th>
+                    <th>idCliente</th>
+                    <th>Tipo Servico</th>
+                    <th>Retirada</th>
                     <th>A&ccedil&atildeo</th>
                 </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
-                <tr>
-                    <td colspan="5"></td>
-                </tr>
+                <c:forEach var="servico" items="${allServicos}">
+                    <tr>
+
+                        <td>${servico.os}</td>
+                        <td>${servico.idCliente}</td>
+                        <td>${servico.tipoServiço}</td>
+                        <td>${servico.retirada}</td>
+                        <td>
+                            <a href="servico.jsp?os=${servico.os}&endereco=${servico.retirada}">Update</a>
+
+                            <form action="/delete-servico" method="post">
+                                <input type="hidden" id="os" name="os" value="${servico.os}">
+                                <button type="submit"> Delete </button>
+                            </form>
+                        </td>
+
+                    </tr>
+                </c:forEach>
             </table>
         </div>
     </div>

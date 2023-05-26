@@ -1,4 +1,4 @@
-package br.com.zemudanca.servlet.servicos;
+package br.com.zemudanca.servlet.servico;
 
 import br.com.zemudanca.dao.ServicoDAO;
 import br.com.zemudanca.model.Servico;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet("/find-all-servico")
-public class ServicosServletListar extends HttpServlet {
+public class ServicoServletListar extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,6 +21,6 @@ public class ServicosServletListar extends HttpServlet {
 
         req.setAttribute("allServicos", allServicos);
 
-        req.getRequestDispatcher("servicos.jsp").forward(req, resp);
+        req.getRequestDispatcher("servico.jsp").forward(req, resp);
     }
 }

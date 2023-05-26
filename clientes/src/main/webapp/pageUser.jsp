@@ -19,7 +19,7 @@
 <body>
 <div class="menu">
           <a href="index.jsp">Clientes</a>
-          <a href="servicos.jsp">Servi&ccedilos</a>
+          <a href="servico.jsp">Servi&ccedilos</a>
           <a href="gerenciamento.jsp">Relat&oacuterios</a>
       </div>
     <div class="introduction">

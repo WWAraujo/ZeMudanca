@@ -1,4 +1,4 @@
-package br.com.zemudanca.servlet.servicos;
+package br.com.zemudanca.servlet.servico;
 
 import br.com.zemudanca.dao.ServicoDAO;
 
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/alterar-servico")
-public class ServicosServletAlterar extends HttpServlet {
+public class ServicoServletAlterar extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
