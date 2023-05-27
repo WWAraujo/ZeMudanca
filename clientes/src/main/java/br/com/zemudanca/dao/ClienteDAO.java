@@ -13,7 +13,7 @@ public class ClienteDAO {
 
     public void salvarCliente(Cliente cliente){
 
-        String SQL = "INSERT INTO cliente (nome_cli,cpf_cli,celular1_cli,celular2_cli,email_cli,endereco_cli) VALUES (?,?,?,?,?,?)";
+        String SQL = "INSERT INTO cliente (cod_cli,nome_cli,cpf_cli,celular1_cli,celular2_cli,email_cli,endereco_cli) VALUES (?,?,?,?,?,?,?)";
 
         try {
 
@@ -21,12 +21,13 @@ public class ClienteDAO {
             System.out.println("Sucesso na conexão");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-            preparedStatement.setString(1, cliente.getNome().toUpperCase());
-            preparedStatement.setString(2, cliente.getCpf().toUpperCase());
-            preparedStatement.setString(3, cliente.getCelular01().toUpperCase());
-            preparedStatement.setString(4, cliente.getCelular02().toUpperCase());
-            preparedStatement.setString(5, cliente.getEmail().toUpperCase());
-            preparedStatement.setString(6, cliente.getEndereco().toUpperCase());
+            preparedStatement.setString(1, cliente.getId().toUpperCase());
+            preparedStatement.setString(2, cliente.getNome().toUpperCase());
+            preparedStatement.setString(3, cliente.getCpf().toUpperCase());
+            preparedStatement.setString(4, cliente.getCelular01().toUpperCase());
+            preparedStatement.setString(5, cliente.getCelular02().toUpperCase());
+            preparedStatement.setString(6, cliente.getEmail().toUpperCase());
+            preparedStatement.setString(7, cliente.getEndereco().toUpperCase());
 
             preparedStatement.execute();
             connection.close();
@@ -62,7 +63,7 @@ public class ClienteDAO {
                 String enderecoCli = resultSet.getString("ENDERECO_CLI");
                 String emailCli = resultSet.getString("EMAIL_CLI");
 
-                Cliente cliente = new Cliente(idCli, clienteNome, cpfCli,celular1Cli,enderecoCli);
+                Cliente cliente = new Cliente(idCli, clienteNome, cpfCli, celular1Cli, celular2Cli,enderecoCli, emailCli);
 
                 clientes.add(cliente);
 

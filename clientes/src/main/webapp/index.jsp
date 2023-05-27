@@ -3,12 +3,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
+    <title>Clientes</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Language" content="pt-br">
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/x-icon" href="img/caminhao.png">
-    <title>Clientes</title>
 </head>
 <header>
     <div class="cabecalho">
@@ -29,6 +29,10 @@
         </div>
         <form method="post" action="/create-cliente" class="form">
             <div class="cadastro">
+
+                <div class="os">
+                    <input type="text" id="os" name="os" value=${param.id}>
+                </div>
 
                 <div class="cdt-nome">
                     <label for="nome">Nome</label><br>
@@ -89,12 +93,24 @@
                         <td>${cliente.celular01}</td>
                         <td>${cliente.endereco}</td>
                         <td>
-                            <a href="index.jsp?id=${cliente.id}&name=${cliente.nome}&cpf=${cliente.celular01}&endereco=${cliente.endereco}">Update</a>
+
+                            <form action="/delete-cliente" method="post">
+                                <input type="hidden" id="id" name="id" value="${cliente.id}">
+                                <input type="hidden" id="nome" name="nome" value="${cliente.nome}">
+                                <input type="hidden" id="cpf" name="cpf" value="${cliente.cpf}">
+                                <input type="hidden" id="data-nascimento" name="data-nascimento" value="${cliente.celular01}">
+                                <input type="hidden" id="endereco" name="endereco" value="${cliente.celular02}">
+                                <input type="hidden" id="endereco" name="endereco" value="${cliente.endereco}">
+                                <input type="hidden" id="endereco" name="endereco" value="${cliente.email}">
+                                <a href="index.jsp?id=${cliente.id}&amp;name=${cliente.nome}&amp;cpf=${cliente.cpf}&amp;celular01=${cliente.celular01}&amp;celular02=${cliente.celular02}&amp;endereco${cliente.endereco}&amp;email${cliente.email}">Update</a>
+                                <span> | </span>
+                            </form>
 
                             <form action="/delete-cliente" method="post">
                                 <input type="hidden" id="id" name="id" value="${cliente.id}">
                                 <button type="submit"> Delete </button>
                             </form>
+
                         </td>
 
                     </tr>

@@ -22,4 +22,15 @@ public class ServicoServletAlterar extends HttpServlet {
 
         resp.sendRedirect("/create-servico");
     }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String servicoOs = req.getParameter("os");
+
+        new ServicoDAO().deleteServicoById(servicoOs);
+        System.out.println("Serviço Alterado");
+
+        resp.sendRedirect("/create-servico");
+    }
 }

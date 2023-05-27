@@ -18,6 +18,7 @@ public class ClienteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String uid = UUID.randomUUID().toString().replace("-", "");
+        String idCliente = req.getParameter("id");
         String nomeCli = req.getParameter("nome");
         String cpf = req.getParameter("cpf");
         String celularl01 = req.getParameter("telefone-1");
@@ -25,15 +26,16 @@ public class ClienteServlet extends HttpServlet {
         String email = req.getParameter("email");
         String endereco = req.getParameter("endereco");
 
-        Cliente cliente = new Cliente(uid,nomeCli,cpf,celularl01,celularl02,endereco,email);
+        Cliente cliente = null;
+        if (idCliente == null) {
+           cliente = new Cliente(uid, nomeCli, cpf, celularl01, celularl02, endereco, email);
+        } else {
+            new ClienteDAO().deleteClienteById(idCliente);
+            cliente = new Cliente(idCliente, nomeCli, cpf, celularl01, celularl02, endereco, email);
+            System.out.println("Cliente atualizado");
+        }
 
         new ClienteDAO().salvarCliente(cliente);
-        System.out.println("Seu nome é "+ cliente.getNome());
-        System.out.println("Seu cpf é "+ cliente.getCpf());
-        System.out.println("Seu celular 1 "+ cliente.getCelular01());
-        System.out.println("Seu celular 2 "+ cliente.getCelular02());
-        System.out.println("Seu email  "+ cliente.getEmail());
-        System.out.println("Seu endereco "+ cliente.getEndereco());
 
         resp.sendRedirect("/find-all-clientes");
     }

@@ -7,16 +7,8 @@ public class Cliente {
     private String id, nome, cpf, celular01, celular02, endereco, email;
     private Date dataNascimento;
 
-    public Cliente(String id, String nome, String cpf, String celular01, String endereco) {
+    public Cliente(String id, String nome, String cpf, String celular01, String celular02, String endereco, String email) {
         this.id = id;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.celular01 = celular01;
-        this.endereco = endereco;
-    }
-
-    public Cliente(String uid, String nome, String cpf, String celular01, String celular02, String endereco, String email) {
-        this.id = uid;
         this.nome = nome;
         this.cpf = cpf;
         this.celular01 = celular01;

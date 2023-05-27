@@ -26,7 +26,14 @@ public class ServicoServlet extends HttpServlet {
         String data = req.getParameter("data");
         String hora = req.getParameter("hora");
 
-        Servico servico = new Servico(iud, idCliente, tipoServico, retirada, entrega, data, hora);
+        Servico servico = null;
+        if (os.isEmpty()){
+           servico = new Servico(iud, idCliente, tipoServico, retirada, entrega, data, hora);
+        } else {
+            new ServicoDAO().deleteServicoById(os);
+            servico = new Servico(os, idCliente, tipoServico, retirada, entrega, data, hora);
+            System.out.println("Serviço atualizado");
+        }
 
         new ServicoDAO().salvarServico(servico);
 

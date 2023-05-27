@@ -18,8 +18,10 @@ public class ServicoServletDeletar extends HttpServlet  {
         String servicoOs = req.getParameter("os");
 
         new ServicoDAO().deleteServicoById(servicoOs);
-        System.out.println("Serviço Alterado");
+        System.out.println("Serviço Deletado");
 
         resp.sendRedirect("/create-servico");
     }
+
+
 }

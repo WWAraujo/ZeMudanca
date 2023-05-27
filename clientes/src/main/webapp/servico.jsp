@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+
 <head>
     <meta charset="UTF-8">
     <title>Servi&ccedilos</title>
+    <script>
+        function encodeURIComponent(value) {
+            return window.encodeURIComponent(value);
+        }
+    </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Language" content="pt-br">
@@ -38,30 +46,30 @@
 
                 <div class="cliente">
                     <label for="cliente">Cliente:</label><br>
-                    <input type="text" id="cliente" name="cliente" value=${param.endereco}>
+                    <input type="text" id="cliente" name="cliente" value=${param.idCliente}>
                 </div>
 
                 <div class="servico">
                     <label for="servico">Servi&ccedilo:</label><br>
-                    <input type="text" id="servico" name="servico">
+                    <input type="text" id="servico" name="servico" value=${param.tipoServico}>
                 </div>
                 <div class="retirada">
                     <label for="retirada">Endere&ccedilo de Retirada:</label><br>
-                    <input type="text" id="retirada" name="retirada">
+                    <input type="text" id="retirada" name="retirada" value=${param.retirada}>
                 </div>
                 <div class="entrega">
                     <label for="entrega">Endere&ccedilo de Entrega:</label><br>
-                    <input type="text" id="entrega" name="entrega">
+                    <input type="text" id="entrega" name="entrega" value=${param.entrega}>
                 </div>
                 <div class="data-hora">
                     <div class="data">
                         <label for="data">Data da Retirada</label><br>
-                        <input type="date" id="data" name="data">
+                        <input type="date" id="data" name="data" value=${param.data}>
                     </div>
 
                     <div class="hora">
                         <label for="hora">Hora da Retirada:</label><br>
-                        <input type="time" id="hora" name="hora">
+                        <input type="time" id="hora" name="hora" value=${param.hora}>
                     </div>
                 </div>
                 <div class="salvar">
@@ -83,15 +91,27 @@
 
                         <td>${servico.os}</td>
                         <td>${servico.idCliente}</td>
-                        <td>${servico.tipoServiço}</td>
+                        <td>${servico.tipoServico}</td>
                         <td>${servico.retirada}</td>
                         <td>
-                            <a href="servico.jsp?os=${servico.os}&endereco=${servico.retirada}">Update</a>
+
+                            <form action="/alterar-servico" method="post">
+                                <input type="hidden" id="os" name="os" value="${servico.os}">
+                                <input type="hidden" id="cliente" name="cliente" value="${servico.idCliente}">
+                                <input type="hidden" id="servico" name="servico" value="${servico.tipoServico}">
+                                <input type="hidden" id="retirada" name="retirada" value="${servico.retirada}">
+                                <input type="hidden" id="entrega" name="entrega" value="${servico.entrega}">
+                                <input type="hidden" id="data" name="data" value="${servico.data}">
+                                <input type="hidden" id="hora" name="hora" value="${servico.hora}">
+                                <a href="servico.jsp?os=${servico.os}&amp;idCliente=${servico.idCliente}&amp;tipoServico=${servico.tipoServico}&amp;retirada=${servico.retirada}&amp;entrega=${servico.entrega}&amp;data=${servico.data}&amp;hora=${servico.hora}">Update</a>
+                                <span> | </span>
+                            </form>
 
                             <form action="/delete-servico" method="post">
                                 <input type="hidden" id="os" name="os" value="${servico.os}">
                                 <button type="submit"> Delete </button>
                             </form>
+
                         </td>
 
                     </tr>
