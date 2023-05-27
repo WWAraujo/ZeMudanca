@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS cliente (
 	celular2_cli varchar (15),
 	endereco_cli varchar (50),
 	email_cli varchar (50),
-	data_nascimento_cli date);
+	data_nascimento_cli varchar (50));
 
 
 CREATE TABLE IF NOT EXISTS servico (

@@ -25,13 +25,14 @@ public class ClienteServlet extends HttpServlet {
         String celularl02 = req.getParameter("telefone-2");
         String email = req.getParameter("email");
         String endereco = req.getParameter("endereco");
+        String dataNascimento = req.getParameter("dataNascimento");
 
         Cliente cliente = null;
         if (idCliente == null) {
-           cliente = new Cliente(uid, nomeCli, cpf, celularl01, celularl02, endereco, email);
+           cliente = new Cliente(uid, nomeCli, cpf, celularl01, celularl02, endereco, email, dataNascimento);
         } else {
             new ClienteDAO().deleteClienteById(idCliente);
-            cliente = new Cliente(idCliente, nomeCli, cpf, celularl01, celularl02, endereco, email);
+            cliente = new Cliente(idCliente, nomeCli, cpf, celularl01, celularl02, endereco, email, dataNascimento);
             System.out.println("Cliente atualizado");
         }
 

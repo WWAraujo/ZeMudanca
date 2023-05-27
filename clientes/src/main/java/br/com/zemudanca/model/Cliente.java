@@ -4,10 +4,9 @@ import java.util.Date;
 
 public class Cliente {
 
-    private String id, nome, cpf, celular01, celular02, endereco, email;
-    private Date dataNascimento;
+    private String id, nome, cpf, celular01, celular02, endereco, email, dataNascimento;
 
-    public Cliente(String id, String nome, String cpf, String celular01, String celular02, String endereco, String email) {
+    public Cliente(String id, String nome, String cpf, String celular01, String celular02, String endereco, String email, String dataNascimento) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -15,6 +14,7 @@ public class Cliente {
         this.celular02 = celular02;
         this.endereco = endereco;
         this.email = email;
+        this.dataNascimento = dataNascimento;
     }
 
     public String getId() {
@@ -73,11 +73,11 @@ public class Cliente {
         this.email = email;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 }

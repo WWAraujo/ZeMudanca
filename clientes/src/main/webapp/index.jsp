@@ -46,29 +46,29 @@
                     </div>
 
                     <div class="ctd-data">
-                        <label for="data-nascimento">Data de Nascimento</label><br>
-                        <input type="text" id="data-nascimento" name="data-nascimento">
+                        <label for="dataNascimento">Data de Nascimento</label><br>
+                        <input type="text" id="dataNascimento" name="dataNascimento" value=${param.nacimento}>
                     </div>
                 </div>
 
                 <div class="telefones">
                     <div class="ctd-telf1">
                         <label for="telefone-1">Telefone 1</label><br>
-                        <input type="text" id="telefone-1" name="telefone-1">
+                        <input type="text" id="telefone-1" name="telefone-1" value=${param.celular01}>
                     </div>
                     <div class="ctd-telf2">
                         <label for="telefone-2">Telefone 2</label><br>
-                        <input type="text" id="telefone-2" name="telefone-2">
+                        <input type="text" id="telefone-2" name="telefone-2" value=${param.celular02}>
                     </div>
                 </div>
                 <div class="ctd-part3">
                     <div class="telf1">
                         <label for="email">E-mail</label><br>
-                        <input type="text" id="email" name="email">
+                        <input type="text" id="email" name="email" value=${param.email}>
                     </div>
                     <div class="telf2">
                         <label for="endereco">Endere&ccedil;o</label><br>
-                        <input type="text" id="endereco" name="endereco">
+                        <input type="text" id="endereco" name="endereco" value=${param.endereco}>
                     </div>
                 </div>
                 <div class="salvar">
@@ -102,7 +102,7 @@
                                 <input type="hidden" id="endereco" name="endereco" value="${cliente.celular02}">
                                 <input type="hidden" id="endereco" name="endereco" value="${cliente.endereco}">
                                 <input type="hidden" id="endereco" name="endereco" value="${cliente.email}">
-                                <a href="index.jsp?id=${cliente.id}&amp;name=${cliente.nome}&amp;cpf=${cliente.cpf}&amp;celular01=${cliente.celular01}&amp;celular02=${cliente.celular02}&amp;endereco${cliente.endereco}&amp;email${cliente.email}">Update</a>
+                                <a href="index.jsp?id=${cliente.id}&amp;name=${cliente.nome}&amp;cpf=${cliente.cpf}&amp;nacimento=${cliente.cpf}&amp;celular01=${cliente.celular01}&amp;celular02=${cliente.celular02}&amp;endereco${cliente.endereco}&amp;email${cliente.email}">Update</a>
                                 <span> | </span>
                             </form>
 
