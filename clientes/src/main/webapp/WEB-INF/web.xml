@@ -22,7 +22,7 @@
   </servlet-mapping>
 
   <welcome-file-list>
-    <welcome-file>login.html</welcome-file>
+    <welcome-file>pageUser.jsp</welcome-file>
   </welcome-file-list>
 
   <servlet>

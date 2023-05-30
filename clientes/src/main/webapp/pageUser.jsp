@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/pageUser.css">
     <link rel="icon" type="image/x-icon" href="img/caminhao.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <title>Z&eacute Mudan&ccedila</title>
 </head>
 <header>
@@ -16,16 +17,19 @@
         </div>
     </div>
 </header>
+
 <body>
-<div class="menu">
-          <a href="index.jsp">Clientes</a>
-          <a href="servico.jsp">Servi&ccedilos</a>
-          <a href="gerenciamento.jsp">Relat&oacuterios</a>
-      </div>
+    <div class="menu">
+        <a href="index.jsp">Clientes</a>
+        <a href="servico.jsp">Servi&ccedilos</a>
+        <a href="gerenciamento.jsp">Relat&oacuterios</a>
+    </div>
     <div class="introduction">
-        <h2>FA&CcedilA A MUDAN&CcedilA MAIS F&AacuteCIL E AGIL QUE VOCE UM DIA JAMAIS OUSOU REALIZAR,<br> SOMOS REFERENCIA EM
+        <h2>FA&CcedilA A MUDAN&CcedilA MAIS F&AacuteCIL E AGIL QUE VOCE UM DIA JAMAIS OUSOU REALIZAR,<br> SOMOS
+            REFERENCIA EM
             TRANSPORTE
-            DE BENS, CONOSCO O SEU BEM SER&Aacute<br> PROTEGIDO DO INICIO AO FIM DO SERVI&CcedilO, MANTENDO TODA INTEGRIDADE E
+            DE BENS, CONOSCO O SEU BEM SER&Aacute<br> PROTEGIDO DO INICIO AO FIM DO SERVI&CcedilO, MANTENDO TODA
+            INTEGRIDADE E
             <br>PROTE&Ccedil&AtildeO.
         </h2>
         <img id="entregadores" src="img/entregadores.png">
@@ -34,7 +38,8 @@
     <div class="quemsomos">
         <h1>QUEM SOMOS</h1>
         <h3>Somos uma empresa, criada para facilitar a vida dos<br>auton&ocircmos que trabalham na area de de
-            carreto/<br>mudan&ccedilas/ frete, etc.<br><br>Fruto da ideia de amigos, estudantes de programa&ccedil&atildeo,<br>tendo
+            carreto/<br>mudan&ccedilas/ frete, etc.<br><br>Fruto da ideia de amigos, estudantes de
+            programa&ccedil&atildeo,<br>tendo
             como
             objetivo intermediar o contato do motorista<br>com seu cliente.<br><br>Atendemos as necessidades de
             nossos
@@ -43,11 +48,37 @@
         <img src="img/Rectangle 50.png">
     </div>
     <div class="servicos">
-        <h2>CONHE&CcedilA NOSSOS SERVI&CcedilOS</h2>
-        <img src="img/Rectangle 54.png">
+        <main>
+            <span>CONHE&CcedilA NOSSOS SERVI&CcedilOS</span>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./img/entregadores.png" alt="Foto 01">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./img/Rectangle 50.png" alt="Foto 02">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <img src="./img/Rectangle 54.png" alt="Foto 03">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </main>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="pageUser.js"></script>
     </div>
     <div class="formulario">
-        <h3>GOSTARIA DE CONTRATAR NOSSOS SERVI&CcedilOS?<br>PREENCHA ESSE PR&Eacute-FORMUL&AacuteRIO, QUE LOGO ENTRAREMOS EM CONTATO.
+        <h3>GOSTARIA DE CONTRATAR NOSSOS SERVI&CcedilOS?<br>PREENCHA ESSE PR&Eacute-FORMUL&AacuteRIO, QUE LOGO
+            ENTRAREMOS EM CONTATO.
         </h3>
         <form>
             <div class="precadastro">
@@ -61,13 +92,13 @@
         <button onClick="servico()">SOLICITAR SERVI&CcedilO<img src="img/caminhao.png"></button>
         <script>
 
-        function servico(){
-        var teste = document.querySelector("#nome");
-        var input = teste.value;
-        if(input != null){
-        alert("tst");
-        }
-        }
+            function servico() {
+                var teste = document.querySelector("#nome");
+                var input = teste.value;
+                if (input != null) {
+                    alert("tst");
+                }
+            }
         </script>
     </div>
     <div class="faleconosco">

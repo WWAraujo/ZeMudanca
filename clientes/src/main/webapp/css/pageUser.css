@@ -12,21 +12,21 @@ html, body {
     background-color: blue;
     position: relative;
     width: 100vw;
-    height: 110px;
+    height: 50px;
     padding: 5px;
 }
 
 .img-cabecalho {
     display: flex;
     background-color: white;
-    border-radius: 100px;
-    width: 100px;
-    height: 100px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
     padding: 0px 5px;
 }
 
 .img-cabecalho img {
-    width: 100px;
+    width: 50px;
 }
 
 .menu {
@@ -140,7 +140,7 @@ h3 {
     background-color: #f3f3f3;
 }
 
-.servicos h2 {
+.servicos main {
     font-family: "Inter", sans-serif;
     font-size: 24px;
     font-weight: 100;
@@ -336,11 +336,9 @@ p {
 
 .rodape {
     display: flex;
-    align-content: center;
     justify-content: center;
     background-color: blue;
-    height: 80px;
-    padding: 5px;
+    height: 60px;
     margin-bottom: 0;
     width: 100%;
 }
@@ -348,7 +346,43 @@ p {
 .rodape p {
     text-align: center;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Inter', sans-serif;
-    line-height: 1.5;
+    line-height: 1.3;
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+span{
+    font-size: x-large;
+}
+
+img{
+    box-shadow: 0 1px 2px #0003;
+    width: 100%;
+}
+
+.swiper{
+    height: 500px;
+}
+
+.swiper-slide{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 450px){
+    .swiper{
+        height: 270px;
+    }
 }
