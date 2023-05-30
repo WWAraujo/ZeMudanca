@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/pageUser.css">
     <link rel="icon" type="image/x-icon" href="img/caminhao.png">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>Z&eacute Mudan&ccedila</title>
 </head>
 <header>
@@ -54,17 +54,20 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="project-img">
-                            <img src="./img/entregadores.png" alt="Foto 01">
+                            <img src="./img/Tranportando-sofa.jpeg" alt="Foto 01">
+                            <p>Mudan&ccedila Residencial</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="project-img">
-                            <img src="./img/Rectangle 50.png" alt="Foto 02">
+                            <img src="./img/mudancaempresarial.jpg" alt="Foto 02">
+                            <p>Mudan&ccedila Empresarial</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="project-img">
-                            <img src="./img/Rectangle 54.png" alt="Foto 03">
+                            <img src="./img/img-montagem-01.jpg" alt="Foto 03">
+                            <p>Fazemos a Montagem e Desmontagem dos seus moveis</p>
                         </div>
                     </div>
                 </div>
