@@ -20,7 +20,7 @@ public class ServicoServletDeletar extends HttpServlet  {
         new ServicoDAO().deleteServicoById(servicoOs);
         System.out.println("Serviço Deletado");
 
-        resp.sendRedirect("/create-servico");
+        resp.sendRedirect("/find-all-servico");
     }
 
 
