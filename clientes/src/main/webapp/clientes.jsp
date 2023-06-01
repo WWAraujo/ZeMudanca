@@ -56,8 +56,7 @@
                                 </div>
                                 <div class="ctd-data">
                                     <label for="dataNascimento">Data de Nascimento</label><br>
-                                    <input type="date" id="dataNascimento" name="dataNascimento"
-                                        value=${param.nacimento}>
+                                    <input type="date" id="dataNascimento" name="dataNascimento" value=${param.nacimento}>
                                 </div>
                             </div>
 
@@ -115,7 +114,7 @@
                                         <input type="hidden" id="endereco" name="endereco" value="${cliente.endereco}">
                                         <input type="hidden" id="email" name="email" value="${cliente.email}">
                                         <button id="button-update"><a class="update"
-                                                href="clientes.jsp?id=${cliente.id}&amp;name=${cliente.nome}&amp;cpf=${cliente.cpf}&amp;nacimento=${cliente.dataNascimento}&amp;celular01=${cliente.celular01}&amp;celular02=${cliente.celular02}&amp;endereco${cliente.endereco}&amp;email${cliente.email}">Alterar</a></button>
+                                                href="clientes.jsp?id=${cliente.id}&amp;name=${cliente.nome}&amp;cpf=${cliente.cpf}&amp;nacimento=${cliente.dataNascimento}&amp;celular01=${cliente.celular01}&amp;celular02=${cliente.celular02}&amp;endereco=${cliente.endereco}&amp;email=${cliente.email}">Alterar</a></button>
 
                                     </form>
 
