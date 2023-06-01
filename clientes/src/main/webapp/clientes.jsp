@@ -109,12 +109,13 @@
                                         <input type="hidden" id="id" name="id" value="${cliente.id}">
                                         <input type="hidden" id="nome" name="nome" value="${cliente.nome}">
                                         <input type="hidden" id="cpf" name="cpf" value="${cliente.cpf}">
-                                        <input type="hidden" id="data-nascimento" name="data-nascimento" value="${cliente.celular01}">
-                                        <input type="hidden" id="endereco" name="endereco" value="${cliente.celular02}">
+                                        <input type="hidden" id="data-nascimento" name="data-nascimento" value="${cliente.dataNascimento}">
+                                        <input type="hidden" id="celular01" name="celular01" value="${cliente.celular01}">
+                                        <input type="hidden" id="celular02" name="celular02" value="${cliente.celular02}">
                                         <input type="hidden" id="endereco" name="endereco" value="${cliente.endereco}">
-                                        <input type="hidden" id="endereco" name="endereco" value="${cliente.email}">
+                                        <input type="hidden" id="email" name="email" value="${cliente.email}">
                                         <button id="button-update"><a class="update"
-                                                href="clientes.jsp?id=${cliente.id}&amp;name=${cliente.nome}&amp;cpf=${cliente.cpf}&amp;nacimento=${cliente.cpf}&amp;celular01=${cliente.celular01}&amp;celular02=${cliente.celular02}&amp;endereco${cliente.endereco}&amp;email${cliente.email}">Alterar</a></button>
+                                                href="clientes.jsp?id=${cliente.id}&amp;name=${cliente.nome}&amp;cpf=${cliente.cpf}&amp;nacimento=${cliente.dataNascimento}&amp;celular01=${cliente.celular01}&amp;celular02=${cliente.celular02}&amp;endereco${cliente.endereco}&amp;email${cliente.email}">Alterar</a></button>
 
                                     </form>
 
