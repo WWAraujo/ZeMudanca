@@ -21,6 +21,7 @@
                     <li><a href="clientes.jsp">Clientes</a></li>
                     <li><a href="servico.jsp">Servi&ccedilos</a></li>
                     <li><a href="gerenciamento.jsp">Ordens de Servi&ccedilo</a></li>
+                    <li><a href="index.jsp">Sair</a></li>
                 </ul>
             </div>
         </div>
@@ -28,15 +29,10 @@
 </header>
 <body>
     <div class="container">
-        <div class="titulos">
-            <h1>GERENCIAMENTO</h1>
-            <h3>RELAT&OacuteRIO</h3>
+        <div class="titulo">
+            <h1>ORDENS DE SERVI&CcedilOS</h1>
         </div>
-        <div class="opcao">
-            <h3>CLIENTES</h3>
-            <button class="toggle"></button>
-            <h3>SERVI&CcedilOS</h3>
-        </div>
+        
         <div class="dadosPesquisa">
             <label for="nomeClienteounOS">Nome do Cliente ou N&deg OS:</label><br>
             <input type="text" id="nomeClienteounOS">
@@ -47,7 +43,7 @@
             <input type="datetime-local" id="dataHoraFinal" placeholder="Data e Hora Final">
         </div>
         <div class="gerar">
-            <button>GERAR</button>
+            <button>PESQUISAR</button>
         </div>
         <div class="resultado">
             <table>
@@ -62,7 +58,6 @@
                 </tr>
                 <c:forEach var="cliente" items="${allClientes}">
                 <tr>
-
                         <td>${cliente.id}</td>
                         <td>${cliente.nome}</td>
                         <td>${cliente.celular01}</td>

@@ -19,9 +19,8 @@
             <a href="#menu" id="toggle"><span></span></a>
             <div id="menu">
                 <ul>
-                    <li><a href="clientes.jsp">Clientes</a></li>
-                    <li><a href="servico.jsp">Servi&ccedilos</a></li>
-                    <li><a href="gerenciamento.jsp">Ordens de Servi&ccedilo</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    
                 </ul>
             </div>
         </div>
