@@ -104,7 +104,7 @@
                                 <td>${cliente.endereco}</td>
                                 <td id="acao">
 
-                                    <form action="/delete-cliente" method="post">
+                                    <form action="/alterar-cliente" method="post">
                                         <input type="hidden" id="id" name="id" value="${cliente.id}">
                                         <input type="hidden" id="nome" name="nome" value="${cliente.nome}">
                                         <input type="hidden" id="cpf" name="cpf" value="${cliente.cpf}">

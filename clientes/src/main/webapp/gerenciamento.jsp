@@ -50,23 +50,24 @@
                 <tr>
                     <th>Maticula</th>
                     <th>Nome</th>
-                    <th>Telefone</th>
-                    <th>Endere&ccedilo</th>
+                    <th>Tipo</th>
+                    <th>Retirada</th>
                     <th>Deletar</th>
 
                     <th>OS</th>
                 </tr>
-                <c:forEach var="cliente" items="${allClientes}">
-                <tr>
-                        <td>${cliente.id}</td>
-                        <td>${cliente.nome}</td>
-                        <td>${cliente.celular01}</td>
-                        <td>${cliente.endereco}</td>
-                        <td>
-                            <a href="index.jsp?id=${cliente.id}&name=${cliente.nome}&=telefone-1${cliente.celular01}">Update</a>
+                <c:forEach var="servico" items="${allServicos}">
+                    <tr>
+                        <td>${servico.os}</td>
+                        <td>${servico.idCliente}</td>
+                        <td>${servico.tipoServico}</td>
+                        <td>${servico.retirada}</td>
+                        <td id="acao">
+
+                            <a href="index.jsp?id=${servico.os}&name=${servico.idCliente}&retirada=${cliente.retirada}&entrega=${cliente.entrega}">Update</a>
 
                             <form action="/delete-cliente" method="post">
-                                <input type="hidden" id="id" name="id" value="${cliente.id}">
+                                <input type="hidden" id="id" name="id" value="${servico.os}">
                                 <button type="submit"> Delete </button>
                             </form>
                         </td>

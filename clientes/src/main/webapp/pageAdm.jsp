@@ -17,7 +17,7 @@
             <a href="/find-all-servico">SERVI&CcedilOS</a>
         </button>
         <button>
-            <a href="gerenciamento.jsp">GERENCIAMENTO</a>
+            <a href="/find-all-gerenciamento">GERENCIAMENTO</a>
         </button>
         <button>
             <a href="pageUser.jsp">SITE</a>

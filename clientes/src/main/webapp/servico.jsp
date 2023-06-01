@@ -96,7 +96,6 @@
                             </tr>
                             <c:forEach var="servico" items="${allServicos}">
                                 <tr>
-
                                     <td>${servico.os}</td>
                                     <td>${servico.idCliente}</td>
                                     <td>${servico.tipoServico}</td>
@@ -105,12 +104,9 @@
 
                                         <form action="/alterar-servico" method="post">
                                             <input type="hidden" id="os" name="os" value="${servico.os}">
-                                            <input type="hidden" id="cliente" name="cliente"
-                                                value="${servico.idCliente}">
-                                            <input type="hidden" id="servico" name="servico"
-                                                value="${servico.tipoServico}">
-                                            <input type="hidden" id="retirada" name="retirada"
-                                                value="${servico.retirada}">
+                                            <input type="hidden" id="cliente" name="cliente" value="${servico.idCliente}">
+                                            <input type="hidden" id="servico" name="servico" value="${servico.tipoServico}">
+                                            <input type="hidden" id="retirada" name="retirada" value="${servico.retirada}">
                                             <input type="hidden" id="entrega" name="entrega" value="${servico.entrega}">
                                             <input type="hidden" id="data" name="data" value="${servico.data}">
                                             <input type="hidden" id="hora" name="hora" value="${servico.hora}">
