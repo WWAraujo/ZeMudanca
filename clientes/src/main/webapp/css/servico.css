@@ -2,6 +2,8 @@ html,
 body {
     padding: 0;
     margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .container{
@@ -10,11 +12,44 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100vw;
+}
+
+.container::before {
+    content: " ";
+    background-image: url("../img/caminhao.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
     height: 100%;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.20;
+    z-index: -1;
+}
+
+.organiza-container{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height: 100%;
+    align-content: center;  
+}
+
+.cadastro {
+    margin: 0px 5px 0px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-servico{
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .cabecalho {
@@ -25,87 +60,165 @@ body {
     background-color: blue;
     position: relative;
     width: 100vw;
-    height: 110px;
+    height: 50px;
     padding: 5px;
 }
 
 .img-cabecalho {
     display: flex;
     background-color: white;
-    border-radius: 100px;
-    width: 100px;
-    height: 100px;
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
     padding: 0px 5px;
 }
 
 .img-cabecalho img {
-    width: 100px;
+    width: 48px;
 }
 
-.menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.menu a{
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    margin: 10px 50px 0px 50px;
-    text-decoration: none;
-    color: #000;
-}
-
-.menu a:hover{
-    text-decoration: underline;
-    }
-
-.titulo h1 {
-    padding-top: 40px;
-    font-family: "Inter", sans-serif;
-    font-size: 50px;
-    font-weight: 100;
-}
-
-.cadastro {
-    position: relative;
-    min-height: 100vh;
+.ordena-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    width: 100%;
+    height: 50px;
 }
 
-.cadastro::before{
-    content:" ";
-    background-image: url("../resources/image/caminhao.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
+#toggle {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.20;
-    z-index: -1;
+    right: 0;
+    bottom: 0;
+    margin-right: 78px;
+    width: 28px;
+    height: 30px;
+    margin-top: auto;
 }
+
+#toggle span:after,
+#toggle span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+}
+
+#toggle span:after {
+    top: 9px;
+}
+
+#toggle span {
+    position: relative;
+    display: block;
+
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+    width: 100%;
+    height: 5px;
+    background-color: #c1bdbd;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+    background-color: transparent;
+}
+
+#toggle.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+#toggle.on+#menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu {
+    position: relative;
+    color: #999;
+    width: 150px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    text-align: center;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s;
+    z-index: 2;
+}
+
+#menu:after {
+    position: absolute;
+    top: -18px;
+    left: 74px;
+    content: "";
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid white;
+}
+
+ul,
+li,
+li a {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    padding: 5px;
+    color: #888;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+li a:hover,
+li a:focus {
+    background: #5BC2E7;
+    color: #fff;
+}
+
+
+.titulo h1 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    justify-content: center;
+    text-align: center;
+}
+
 
 .os {
-    font-size: 18px;
+    font-size: 15px;
     font-family: 'Inter', sans-serif;
-    width: 675px;
+    width: 50px;
 }
 
 .os input {
     margin-left: 0;
     margin-top: 5px;
     margin-bottom: 5px;
-    border: 1.9px solid;
-    padding: 0px 20px;
-    width: 50px;
-    height: 33px;
+    border: 1.4px solid;
+    padding: 0px 0px 0px 10px;
+    width: 100px;
+    height: 22px;
     font-size: 16px;
     text-transform: Uppercase;
     font-family: 'Inter', sans-serif;
@@ -117,139 +230,136 @@ body {
 .servico,
 .retirada,
 .entrega {
-    padding: 5px 20px;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    padding-left: 20px;
+    font-size: 15px;
+    
 }
 
 .cliente input {
     margin-top: 5px;
-    border: 1.9px solid;
-    border-radius: 10px;
-    width: 630px;
-    height: 33px;
-    padding: 0px 20px;
-    box-shadow: -2px 5px 5px #a0a0a0;
-    font-size: 16px;
+    margin-bottom: 5px;
+    border: 1.4px solid;
+    padding: 0px 0px 0px 10px;
+    width: 550px;
+    height: 22px;
+    font-size: 14px;
     text-transform: Uppercase;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    box-shadow: -2px 5px 5px #a0a0a0;
 }
 
 .servico input {
-    border: 1.9px solid;
     margin-top: 5px;
-    border-radius: 10px;
-    width: 630px;
-    height: 33px;
-    padding: 0px 20px;
-    box-shadow: -2px 5px 5px #a0a0a0;
-    font-size: 16px;
+    margin-bottom: 5px;
+    border: 1.4px solid;
+    padding: 0px 0px 0px 10px;
+    width: 550px;
+    height: 22px;
+    font-size: 14px;
     text-transform: Uppercase;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    box-shadow: -2px 5px 5px #a0a0a0;
 }
 
 .retirada input {
-    border: 1.9px solid;
     margin-top: 5px;
-    border-radius: 10px;
-    width: 630px;
-    height: 33px;
-    padding: 0px 20px;
-    box-shadow: -2px 5px 5px #a0a0a0;
-    font-size: 16px;
+    margin-bottom: 5px;
+    border: 1.4px solid;
+    padding: 0px 0px 0px 10px;
+    width: 550px;
+    height: 22px;
+    font-size: 14px;
     text-transform: Uppercase;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    box-shadow: -2px 5px 5px #a0a0a0;
 }
 
 .entrega input {
-    border: 1.9px solid;
     margin-top: 5px;
-    border-radius: 10px;
-    width: 630px;
-    height: 33px;
-    padding: 0px 20px;
-    box-shadow: -2px 5px 5px #a0a0a0;
-    font-size: 16px;
+    margin-bottom: 5px;
+    border: 1.4px solid;
+    padding: 0px 0px 0px 10px;
+    width: 550px;
+    height: 22px;
+    font-size: 14px;
     text-transform: Uppercase;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+    box-shadow: -2px 5px 5px #a0a0a0;
 }
 
 .data-hora {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-top: 5px;
+    align-items: center; 
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
 }
 
 .data {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     position: relative;
-    margin-right: 40px;
-}
-
-.data input {
-    margin-right: 2px;
-    border: 1.9px solid;
-    margin-top: 5px;
-    border-radius: 10px;
-    width: 270px;
-    height: 33px;
-    padding: 0px 20px;
-    box-shadow: -2px 5px 5px #a0a0a0;
-    font-size: 16px;
-    text-transform: Uppercase;
+    padding-right: 20px;
+    
 }
 
 .hora {
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     position: relative;
     
 }
 
+.data input,
 .hora input {
-    margin-right: 2px;
-    border: 1.9px solid;
+    padding: 0px 0px 0px 10px;
     margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1.4px solid;
     border-radius: 10px;
-    width: 270px;
-    height: 33px;
-    padding: 0px 20px;
+    width: 260px;
+    height: 22px;
     box-shadow: -2px 5px 5px #a0a0a0;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: Uppercase;
 }
 
 .salvar {
+    margin: 28.5px;
     display: inline-block;
     align-items: center;
     text-align: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
 }
 
-.salvar input{
+.salvar input {
     background-color: #ffffff;
     display: inline-block;
-    border: 2px solid blue;
-    width: 343px;
-    height: 60px;
+    border: 1.5px solid blue;
+    width: 120px;
+    height: 45px;
     border-radius: 40px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
     color: blue;
 }
 
-.salvar input:hover{
+.salvar input:hover {
     cursor: pointer;
     background-color: blue;
     color: white;
 }
 
 .tabela {
+    margin-left:10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left:auto ;
 }
 
 table{
@@ -258,16 +368,22 @@ table{
 }
 
 table th{
-    width: 150px;
-    height:35px;
+    width: 120px;
+    height:25px;
     font-family: 'Inter', sans-serif;
     border-bottom: 1.5px solid black;
 }
 
 table tr td{
-    width: 150px;
-    height: 35px;
+    width: 120px;
+    height: 25px;
     border-radius: 5px;
+    font-size: 12px;
+}
+
+table td>tr{
+    display: flex;
+    flex-direction: row;
 }
 
 table tr td:hover {
@@ -280,22 +396,47 @@ tr:nth-child(even) {
     background-color: rgba(196, 236, 251, 0.5);
 }
 
-.rodape {
+#acao {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color: blue;
-    width: 100vw;
-    height: 100px;
-    padding: 5px;
 }
 
-.rodape p{
+#button-delete {
+    margin: 0px 5px 0px 2.5px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#button-update{
+    margin: 0px 2.5px 0px 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-decoration: none;  
+}
+
+#button-update a{
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+}
+
+.rodape {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: blue;
+    height: 50px;
+    width: 100vw;
+    margin-bottom: 0;
+}
+
+.rodape p {
     text-align: center;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 10px;
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
-
 }
 

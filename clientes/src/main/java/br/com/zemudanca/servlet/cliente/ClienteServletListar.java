@@ -21,7 +21,7 @@ public class ClienteServletListar extends HttpServlet {
 
         req.setAttribute("allClientes", allClientes);
 
-        req.getRequestDispatcher("index.jsp").forward(req, resp);
+        req.getRequestDispatcher("clientes.jsp").forward(req, resp);
 
     }
 }

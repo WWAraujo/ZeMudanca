@@ -11,16 +11,20 @@
 </head>
 <header>
     <div class="cabecalho">
-        <div class="img-cabecalho">
-            <img src="img/caminhao.png" alt="icone">
+        <div class="ordena-menu">
+            <div class="img-cabecalho">
+                <img src="img/caminhao.png" alt="icone">
+            </div>
+            <a href="#menu" id="toggle"><span></span></a>
+            <div id="menu">
+                <ul>
+                    <li><a href="clientes.jsp">Clientes</a></li>
+                    <li><a href="servico.jsp">Servi&ccedilos</a></li>
+                    <li><a href="gerenciamento.jsp">Ordens de Servi&ccedilo</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="menu">
-              <a href="index.jsp">Clientes</a>
-              <a href="servico.jsp">Servi&ccedilos</a>
-              <a href="pageUser.jsp">Site</a>
-          </div>
-</header>
 </header>
 <body>
     <div class="container">
@@ -81,6 +85,46 @@
         const toggleBtn = document.querySelector(".toggle");
 
         toggleBtn.addEventListener("click", () => toggleBtn.classList.toggle("active"));
+    </script>
+    <script>
+        var theToggle = document.getElementById('toggle');
+
+        function hasClass(elem, className) {
+            return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+        }
+
+        function addClass(elem, className) {
+            if (!hasClass(elem, className)) {
+                elem.className += ' ' + className;
+            }
+        }
+
+        function removeClass(elem, className) {
+            var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+            if (hasClass(elem, className)) {
+                while (newClass.indexOf(' ' + className + ' ') >= 0) {
+                    newClass = newClass.replace(' ' + className + ' ', ' ');
+                }
+                elem.className = newClass.replace(/^\s+|\s+$/g, '');
+            }
+        }
+
+        function toggleClass(elem, className) {
+            var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, " ") + ' ';
+            if (hasClass(elem, className)) {
+                while (newClass.indexOf(" " + className + " ") >= 0) {
+                    newClass = newClass.replace(" " + className + " ", " ");
+                }
+                elem.className = newClass.replace(/^\s+|\s+$/g, '');
+            } else {
+                elem.className += ' ' + className;
+            }
+        }
+
+        theToggle.onclick = function () {
+            toggleClass(this, 'on');
+            return false;
+        }
     </script>
 </body>
 <footer>

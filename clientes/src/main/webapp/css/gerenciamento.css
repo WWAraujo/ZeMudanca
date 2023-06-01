@@ -19,42 +19,137 @@ body, html{
     align-content: center;
     background-color: blue;
     position: relative;
-    width: 100vw;
-    height: 110px;
+    width: 100%;
+    height: 50px;
     padding: 5px;
 }
 
 .img-cabecalho {
-    display: flex;
     background-color: white;
-    border-radius: 100px;
-    width: 100px;
-    height: 100px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
     padding: 0px 5px;
 }
 
 .img-cabecalho img {
-    width: 100px;
+    width: 50px;
 }
-
-.menu {
+.ordena-menu {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 50px;
 }
 
-.menu a{
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    margin: 10px 50px 10px 50px;
+#toggle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 78px;
+    width: 28px;
+    height: 30px;
+    margin-top: auto;
+}
+
+#toggle span:after,
+#toggle span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -9px;
+}
+
+#toggle span:after {
+    top: 9px;
+}
+
+#toggle span {
+    position: relative;
+    display: block;
+
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+    width: 100%;
+    height: 5px;
+    background-color: #c1bdbd;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+    background-color: transparent;
+}
+
+#toggle.on span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#toggle.on span:after {
+    transform: rotate(-45deg) translate(7px, -8px);
+}
+
+#toggle.on+#menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu {
+    position: relative;
+    color: #999;
+    width: 150px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    text-align: center;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s;
+    z-index: 2;
+}
+
+#menu:after {
+    position: absolute;
+    top: -18px;
+    left: 74px;
+    content: "";
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid white;
+}
+
+ul,
+li,
+li a {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    padding: 5px;
+    color: #888;
     text-decoration: none;
-    color: #000;
+    transition: all .2s;
 }
 
-.menu a:hover{
-    text-decoration: underline;
-    }
+li a:hover,
+li a:focus {
+    background: #5BC2E7;
+    color: #fff;
+}
 
 .titulos h1 {
     font-family: "Inter", sans-serif;
@@ -233,20 +328,20 @@ tr:nth-child(even) {
 
 .rodape {
     display: flex;
-    align-content: center;
-    justify-content:center;
+    justify-content: center;
     background-color: blue;
-    height: 80px;
-    padding: 5px;
+    height: 60px;
     margin-bottom: 0;
-    width: 100vw;}
+    width: 100%;
+}
 
-.rodape p{
+.rodape p {
     text-align: center;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Inter', sans-serif;
-    line-height: 1.5;}
+    line-height: 1.3;
+}
 
 .tabela resultado{
     background-color: silver;
